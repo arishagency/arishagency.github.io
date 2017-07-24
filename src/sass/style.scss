@@ -1,74 +1,12 @@
-@mixin clearfix() {
-  &:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-}
+// (`ㅅ`)づ framework imports
 
-body {
-  font-family: sans-serif;
-}
+@import "./bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-.container {
-  @include clearfix();
-}
+// (`ㅅ`)づ global imports
 
-.top-nav {
+@import "variables";
+@import "mixins";
 
-}
+// (`ㅅ`)づ project imports
 
-.post {
-  .post-meta {
-
-  }
-}
-
-.sidebar {
-  ol {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-}
-
-.row {
-  @include clearfix();
-}
-
-.pagination {
-    @include clearfix();
-
-    &.pagination-none {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 768px) {
-
-  .main, article {
-    float: left;
-    width: 61%;
-  }
-
-  aside {
-    float: right;
-    width: 35%;
-  }
-
-}
-
-@media screen and (min-width: 992px) {
-
-  html {
-    background-color: #eee;
-  }
-
-  body {
-    max-width: 992px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 15px;
-  }
-
-}
+@import "layout";

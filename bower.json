@@ -5,7 +5,7 @@
     "jquery": "~2.1.1",
     "font-awesome": "~4.2.0",
     "animatewithsass": "geoffgraham.animate.scss#~3.2.2",
-    "bootstrap-sass": "~3.3.6",
+    "bootstrap-sass": "^3.3.7",
     "modernizr": "~2.8.3",
     "detectizr": "2.2.0",
     "chosen": "~1.5.1",
