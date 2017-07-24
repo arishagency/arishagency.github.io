@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif; }
+
+.container:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.sidebar ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+.row:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.pagination:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.pagination.pagination-none {
+  display: none; }
+
+@media screen and (min-width: 768px) {
+  .main, article {
+    float: left;
+    width: 61%; }
+  aside {
+    float: right;
+    width: 35%; } }
+
+@media screen and (min-width: 992px) {
+  html {
+    background-color: #eee; }
+  body {
+    max-width: 992px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px; } }
