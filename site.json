@@ -5,7 +5,7 @@
   "rss": "/rss.xml",
   "maxItems": 6,
   "editFolder": "./edit",
-  "distFolder": "./build",
+  "distFolder": "./dist",
   "concatJs": [
     "./bower_components/jquery/dist/jquery.js",
     "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
