@@ -5,6 +5,6 @@ var gulp = require("gulp"),
     fs = require("fs"),
     globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
-gulp.task("clobber", function () {
+gulp.task("clean", function () {
     return removeDir(globalVar.distFolder);
 });

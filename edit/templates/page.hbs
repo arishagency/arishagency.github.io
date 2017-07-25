@@ -1,17 +1,17 @@
 {{> header}}
-
 <div class="container">
-    {{> navigation}}
+{{> navigation}}
     {{#post}}
     <div class="row">
-        <article class="col-md-9">
+        <article class="main col-md-8">
             <h1>{{title}}</h1>
             {{{body}}}
         </article>
-        <aside class="sidebar col-md-3">
+        <aside class="sidebar col-md-4">
             {{> sidebar}}
         </aside>
     </div>
     {{/post}}
-    {{> footer}}
+{{> footer}}
 </div>
+{{> js}}

@@ -19,7 +19,7 @@ It is similar to other static site generators in that it takes your Markdown con
 * HTML compression
 * RSS feed creation
 * Server for viewing built site
-* Clobber for cleaning build directory
+* Clean for cleaning build directory
 * Save content as draft
 * Convert draft templates
 * Creates a `dist/` directory with built content and assets
@@ -129,7 +129,7 @@ The following tasks can also be run individually:
 
 * **develop** - a live-reload task for developing your site where changes are reloaded automatically including draft posts and pages - view at http://localhost:8080
 * **sass** - converts sass files to css
-* **clobber** - removes the `dist/` directory
+* **clean** - removes the `dist/` directory
 * **server** - view your built site locally at http://localhost:8080
 * **help** - lists available tasks
 
@@ -205,12 +205,3 @@ Helpers are available to your Handlebar templates and partials, these are:
 * resolve - resolves the path to an asset relative to the site root
 
     `{{resolve "/favicon.ico"}}`
-
-
-### Soon
-
-[ ] [KSS styleguides](https://github.com/kneath/kss/blob/master/SPEC.md)
-[ ] Colors as SASS maps
-[ ] SASS error handling
-[ ] fontgen
-[ ] iconfont

@@ -1,28 +1,37 @@
+@include font-face(fontawesome-webfont);
+
+header.header {
+    border-bottom: solid 1px $color-accent;
+    padding-bottom: $gap;
+}
+footer.footer {
+    border-top: solid 1px $color-accent;
+    padding-top: $gap;
+}
+
+body {
+    padding: $gap 0;
+}
+
 a {
     color: #666;
-    @include transition;
     &:hover {
         color: black;
         text-decoration: none;
     }
 }
-body {
-    padding: $gap 0;
-}
-@include font-face(fontawesome-webfont);
-
-header.header {
-    border-bottom: solid 1px $color_accent;
+.main {
     padding-bottom: $gap;
 }
 
-footer.footer {
-    border-top: solid 1px $color_accent;
-    padding-top: $gap;
-}
-
-a.post {
-    border-bottom: solid 1px $color_accent;
-    padding: $gap 0;
-    display: block;
+.list {
+    a {
+        display: block;
+        @extend h4;
+        img {
+            display: block;
+            padding-top: $gap;
+            width: 100%;
+        }
+    }
 }
