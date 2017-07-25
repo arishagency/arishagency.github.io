@@ -205,3 +205,9 @@ Helpers are available to your Handlebar templates and partials, these are:
 * resolve - resolves the path to an asset relative to the site root
 
     `{{resolve "/favicon.ico"}}`
+
+Soon:
+
+- KSS styleguide
+- error handling
+- redo README, smaller
