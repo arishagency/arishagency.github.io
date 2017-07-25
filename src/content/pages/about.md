@@ -1,6 +1,6 @@
 ---
 slug: about
-title: About us
+title: About WWW
 template: page.hbs
 ---
 

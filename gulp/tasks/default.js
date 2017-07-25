@@ -5,5 +5,5 @@ var gulp = require("gulp"),
 
 gulp.task("default", function(done) {
     process.env.GSD_PUBLISHED = "true";
-    runSequence("build", done);
+    runSequence(["clobber"], ["build"], ["develop"], done);
 });
