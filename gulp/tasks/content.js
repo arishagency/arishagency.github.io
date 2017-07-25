@@ -2,10 +2,12 @@
 
 var gulp = require("gulp"),
     markdownToJson = require("gulp-markdown-to-json"),
-    marked = require("marked");
+    marked = require("marked"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("content", function () {
-    return gulp.src("./src/content/**/*.md")
+    return gulp.src(globalVar.editFolder + "/content/**/*.md")
         .pipe(markdownToJson(marked))
-        .pipe(gulp.dest("./build/content"));
+        .pipe(gulp.dest(globalVar.distFolder + "/content"));
 });

@@ -5,22 +5,22 @@ var gulp = require("gulp"),
     uncss = require("gulp-uncss"),
     minifyCSS = require("gulp-minify-css"),
     rename = require("gulp-rename"),
-    fs = require("fs");
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("uncss", ["copy-css"], function () {
-    var siteData = JSON.parse(fs.readFileSync("./site.json", "utf8"));
     var uncssIgnore;
-    if (siteData.uncssIgnore) {
-        uncssIgnore = siteData.uncssIgnore;
+    if (globalVar.uncssIgnore) {
+        uncssIgnore = globalVar.uncssIgnore;
     }
-    return gulp.src("./src/css/style.css")
+    return gulp.src(globalVar.editFolder + "/css/style.css")
         .pipe(uncss({
-            html: glob.sync("./build/**/*.html"),
+            html: glob.sync(globalVar.distFolder +"/**/*.html"),
             ignore: uncssIgnore
         }))
         .pipe(minifyCSS())
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(gulp.dest("./build/css"));
+        .pipe(gulp.dest(globalVar.distFolder +"/css"));
 });

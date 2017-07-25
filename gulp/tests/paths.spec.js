@@ -1,7 +1,9 @@
 "use strict";
 
 var paths = require("../lib/paths"),
-    expect = require("chai").expect;
+    expect = require("chai").expect,
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 describe("When replacing paths", function () {
     beforeEach(function () {

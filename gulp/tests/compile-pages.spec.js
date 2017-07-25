@@ -6,7 +6,8 @@ var compilePages = require("../lib/compile-pages"),
     mockery = require("mockery"),
     Promise = require("bluebird"),
     sinon = require("sinon"),
-    fs = require("fs");
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 describe("Given pages and posts", function () {
     var rootPath = ".tmp/compile-pages";
@@ -28,13 +29,13 @@ describe("Given pages and posts", function () {
 
         // set-up folders:
         [
-            "/src",
-            "/src/templates",
-            "/src/templates/partials",
-            "/build",
-            "/build/content",
-            "/build/content/pages",
-            "/build/content/posts"
+            globalVar.editFolder,
+            globalVar.editFolder + "/templates",
+            globalVar.editFolder + "/templates/partials",
+            globalVar.distFolder,
+            globalVar.distFolder + "/content",
+            globalVar.distFolder + "/content/pages",
+            globalVar.distFolder + "/content/posts"
         ].forEach(function (dir) {
             if (!fs.existsSync(rootPath + dir)) {
                 fs.mkdirSync(rootPath + dir);
@@ -47,12 +48,12 @@ describe("Given pages and posts", function () {
                 encoding: "utf8"
             });
         fs.writeFileSync(rootPath +
-            "/src/templates/page.hbs",
+            globalVar.editFolder + "/templates/page.hbs",
             "<div class=\"page\"><h1>{{post.title}}</h1>{{{post.body}}}<h3>{{site.testSiteVar}}</h3><h4>{{post.site.testSiteVar}}</h4></div>", {
                 encoding: "utf8"
             });
         fs.writeFileSync(rootPath +
-            "/src/templates/post.hbs",
+            globalVar.editFolder + "/templates/post.hbs",
             "<div class=\"post\"><h1>{{post.title}}</h1>{{{post.body}}}<h3>{{site.testSiteVar}}</h3><h4>{{post.site.testSiteVar}}</h4></div>", {
                 encoding: "utf8"
             });
@@ -65,7 +66,7 @@ describe("Given pages and posts", function () {
     describe("When compiling a page", function () {
         before(function (done) {
             fs.writeFileSync(rootPath +
-                "/build/content/pages/test-page.json",
+                globalVar.distFolder + "/content/pages/test-page.json",
                 "{\"slug\":\"test-page\",\"title\":\"Test page\",\"template\":\"page.hbs\",\"body\":\"<p>Test page content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -75,14 +76,14 @@ describe("Given pages and posts", function () {
 
         it("Should create the static page", function () {
             expect(fs.existsSync(rootPath +
-                "/build/test-page/index.html"
+                globalVar.distFolder + "/test-page/index.html"
             )).to.be.true;
         });
 
         it("Should have the correct page content",
             function () {
                 expect(fs.readFileSync(rootPath +
-                    "/build/test-page/index.html",
+                    globalVar.distFolder + "/test-page/index.html",
                     "utf8")).to.equal(
                     "<div class=\"page\"><h1>Test page</h1><p>Test page content</p><h3>my test value</h3><h4>my test value</h4></div>"
                 );
@@ -92,7 +93,7 @@ describe("Given pages and posts", function () {
     describe("When compiling a page with no slug", function () {
         before(function (done) {
             fs.writeFileSync(rootPath +
-                "/build/content/pages/test-page-no-slug.json",
+                globalVar.distFolder + "/content/pages/test-page-no-slug.json",
                 "{\"title\":\"Test page no slug\",\"template\":\"page.hbs\",\"body\":\"<p>Test page content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -102,14 +103,14 @@ describe("Given pages and posts", function () {
 
         it("Should create the static page", function () {
             expect(fs.existsSync(rootPath +
-                "/build/test-page-no-slug/index.html"
+                globalVar.distFolder + "/test-page-no-slug/index.html"
             )).to.be.true;
         });
 
         it("Should have the correct page content",
             function () {
                 expect(fs.readFileSync(rootPath +
-                    "/build/test-page-no-slug/index.html",
+                    globalVar.distFolder + "/test-page-no-slug/index.html",
                     "utf8")).to.equal(
                     "<div class=\"page\"><h1>Test page no slug</h1><p>Test page content</p><h3>my test value</h3><h4>my test value</h4></div>"
                 );
@@ -119,7 +120,7 @@ describe("Given pages and posts", function () {
     describe("When compiling a post", function () {
         before(function (done) {
             fs.writeFileSync(rootPath +
-                "/build/content/posts/test-post.json",
+                globalVar.distFolder + "/content/posts/test-post.json",
                 "{\"slug\":\"test-post\",\"title\":\"Test post\",\"date\":\"2014-06-11\",\"template\":\"post.hbs\",\"body\":\"<p>Test post content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -129,14 +130,14 @@ describe("Given pages and posts", function () {
 
         it("Should create the static post", function () {
             expect(fs.existsSync(rootPath +
-                "/build/test-post/index.html"
+                globalVar.distFolder + "/test-post/index.html"
             )).to.be.true;
         });
 
         it("Should have the correct post content",
             function () {
                 expect(fs.readFileSync(rootPath +
-                    "/build/test-post/index.html",
+                    globalVar.distFolder + "/test-post/index.html",
                     "utf8")).to.equal(
                     "<div class=\"post\"><h1>Test post</h1><p>Test post content</p><h3>my test value</h3><h4>my test value</h4></div>"
                 );
@@ -146,7 +147,7 @@ describe("Given pages and posts", function () {
     describe("When compiling a post with no slug", function () {
         before(function (done) {
             fs.writeFileSync(rootPath +
-                "/build/content/posts/test-post-no-slug.json",
+                globalVar.distFolder + "/content/posts/test-post-no-slug.json",
                 "{\"title\":\"Test post no slug\",\"date\":\"2014-06-11\",\"template\":\"post.hbs\",\"body\":\"<p>Test post content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -156,14 +157,14 @@ describe("Given pages and posts", function () {
 
         it("Should create the static post", function () {
             expect(fs.existsSync(rootPath +
-                "/build/test-post-no-slug/index.html"
+                globalVar.distFolder + "/test-post-no-slug/index.html"
             )).to.be.true;
         });
 
         it("Should have the correct post content",
             function () {
                 expect(fs.readFileSync(rootPath +
-                    "/build/test-post-no-slug/index.html",
+                    globalVar.distFolder + "/test-post-no-slug/index.html",
                     "utf8")).to.equal(
                     "<div class=\"post\"><h1>Test post no slug</h1><p>Test post content</p><h3>my test value</h3><h4>my test value</h4></div>"
                 );
@@ -175,7 +176,7 @@ describe("Given pages and posts", function () {
 
         beforeEach(function (done) {
             fs.writeFileSync(rootPath +
-                "/build/content/pages/test-page.json",
+                globalVar.distFolder + "/content/pages/test-page.json",
                 "{\"slug\":\"test-page\",\"title\":\"Test page\",\"template\":\"page.hbs\",\"body\":\"<p>Test page content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -225,7 +226,7 @@ describe("Given pages and posts", function () {
 
     describe("When compiling posts and excluding draft templates", function () {
         var minimistStub, newCompilePages;
-        
+
         before(function (done) {
             mockery.enable({
                 warnOnReplace: false,
@@ -239,9 +240,9 @@ describe("Given pages and posts", function () {
             };
             mockery.registerAllowable("../lib/drafts");
             mockery.registerMock("minimist", minimistStub);
-            
+
             fs.writeFileSync(rootPath +
-                "/build/content/posts/test-draft-post.json",
+                globalVar.distFolder + "/content/posts/test-draft-post.json",
                 "{\"slug\":\"test-draft-post\",\"title\":\"Test draft post\",\"date\":\"2014-06-11\",\"template\":\"post.hbs\",\"status\":\"draft\",\"body\":\"<p>Test draft post content</p>\"}", {
                     encoding: "utf8"
                 });
@@ -259,7 +260,7 @@ describe("Given pages and posts", function () {
         it("Should not create the static post",
             function () {
                 expect(fs.existsSync(rootPath +
-                    "/build/test-draft-post/index.html"
+                    globalVar.distFolder + "/test-draft-post/index.html"
                 )).to.be.false;
             });
     });
@@ -268,12 +269,12 @@ describe("Given pages and posts", function () {
         function () {
             before(function (done) {
                 fs.writeFileSync(rootPath +
-                    "/src/templates/post.hbs",
+                    globalVar.editFolder + "/templates/post.hbs",
                     "<div class=\"{{body_class}}\"><div class=\"post\"><h1>{{post.title}}</h1>{{{post.body}}}</div></div>", {
                         encoding: "utf8"
                     });
                 fs.writeFileSync(rootPath +
-                    "/build/content/posts/test-tagged-post.json",
+                    globalVar.distFolder + "/content/posts/test-tagged-post.json",
                     "{\"slug\":\"test-tagged-post\",\"title\":\"Test tagged post\",\"date\":\"2014-06-11\",\"template\":\"post.hbs\",\"tags\":\"tag1 tag2\",\"body\":\"<p>Test tagged post content</p>\"}", {
                         encoding: "utf8"
                     });
@@ -284,7 +285,7 @@ describe("Given pages and posts", function () {
             it("Should have the correct post content",
                 function () {
                     expect(fs.readFileSync(rootPath +
-                        "/build/test-tagged-post/index.html",
+                        globalVar.distFolder + "/test-tagged-post/index.html",
                         "utf8")).to.equal(
                         "<div class=\"post-template tag-tag1 tag-tag2\"><div class=\"post\"><h1>Test tagged post</h1><p>Test tagged post content</p></div></div>"
                     );

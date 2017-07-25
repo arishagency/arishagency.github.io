@@ -3,7 +3,8 @@
 var removeDir = require("../lib/remove-dir"),
     expect = require("chai").expect,
     mockery = require("mockery"),
-    fs = require("fs");
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 describe("When removing directories", function () {
     beforeEach(function () {
@@ -16,7 +17,7 @@ describe("When removing directories", function () {
                 fs.mkdirSync(dir);
             }
         });
-        
+
         var files = {
             ".tmp/remove-dir-test/file1": "This is test content",
             ".tmp/remove-dir-test/file2": "This is test content",

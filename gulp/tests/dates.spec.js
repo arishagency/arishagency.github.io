@@ -1,7 +1,9 @@
 "use strict";
 
 var dates = require("../lib/dates"),
-    expect = require("chai").expect;
+    expect = require("chai").expect,
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 describe("When parsing dates", function () {
     beforeEach(function () {

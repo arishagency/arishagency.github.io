@@ -1,7 +1,9 @@
 "use strict";
 
 var downzero = require("../lib/downzero"),
-    expect = require("chai").expect;
+    expect = require("chai").expect,
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 describe("When extracting html tags with double quotes", function () {
     beforeEach(function () {

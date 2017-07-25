@@ -7,7 +7,9 @@ var gulp = require("gulp"),
     compilePages = require("../lib/compile-pages"),
     compileTags = require("../lib/compile-tags"),
     compileDates = require("../lib/compile-dates"),
-    removeDir = require("../lib/remove-dir");
+    removeDir = require("../lib/remove-dir"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("compile", ["content"], function (done) {
     var rootPath = ".";
@@ -30,7 +32,7 @@ gulp.task("compile", ["content"], function (done) {
 
     Promise.all(compilePromises)
         .then(function () {
-            removeDir("./build/content");
+            removeDir(globalVar.distFolder + "/content");
             done();
         }, function () {
             // call done even if there are errors

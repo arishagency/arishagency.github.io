@@ -4,13 +4,13 @@ var gulp = require("gulp"),
     concat = require("gulp-concat"),
     uglify = require("gulp-uglify"),
     rename = require("gulp-rename"),
-    fs = require("fs");
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("concat-js", function () {
-    var siteData = JSON.parse(fs.readFileSync("./site.json", "utf8"));
-    var jsFiles = ["./src/js/*.js"];
-    if (siteData.concatJs) {
-        jsFiles = siteData.concatJs;
+    var jsFiles = [globalVar.editFolder + "/js/*.js"];
+    if (globalVar.concatJs) {
+        jsFiles = globalVar.concatJs;
     }
     return gulp.src(jsFiles)
         .pipe(concat("combined.js"))
@@ -18,5 +18,5 @@ gulp.task("concat-js", function () {
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(gulp.dest("./build/js"));
+        .pipe(gulp.dest(globalVar.distFolder + "/js"));
 });

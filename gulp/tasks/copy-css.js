@@ -2,15 +2,13 @@
 
 var gulp = require("gulp"),
     fs = require("fs"),
-    minifyCSS = require("gulp-minify-css");
+    minifyCSS = require("gulp-minify-css"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("copy-css", ["sass"], function () {
-    var siteData = JSON.parse(fs.readFileSync("./site.json", "utf8"));
-    var styleSheet = "style.css";
-    if (siteData.styleSheet) {
-        styleSheet = siteData.styleSheet;
-    }
-    return gulp.src(["./src/css/**/*.css", "!./src/css/**/" + styleSheet])
+    var styleSheet = globalVar.styleSheet;
+    return gulp.src(globalVar.editFolder + "/css/**/*.css")
         .pipe(minifyCSS())
-        .pipe(gulp.dest("./build/css"));
+        .pipe(gulp.dest(globalVar.distFolder + "/css"));
 });
