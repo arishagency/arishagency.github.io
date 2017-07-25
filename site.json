@@ -4,6 +4,8 @@
   "url": "",
   "rss": "/rss.xml",
   "maxItems": 6,
+  "editFolder": "./src",
+  "distFolder": "./build",
   "concatJs": [
     "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
     "./src/js/*.js"
