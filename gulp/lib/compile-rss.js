@@ -1,20 +1,20 @@
 "use strict";
 
-var fs = require("fs"),
-    Promise = require("bluebird"),
+var Promise = require("bluebird"),
     glob = require("glob"),
     moment = require("moment"),
     RSS = require("rss"),
     dates = require("../lib/dates"),
     resolvePaths = require("../lib/paths"),
-    compileDrafts = require("../lib/drafts");
+    compileDrafts = require("../lib/drafts"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 module.exports = function (rootPath) {
     return new Promise(function(resolve, reject) {
-        var siteData = JSON.parse(fs.readFileSync(rootPath + "/site.json", "utf8"));
         var gulpVersion = require("gulp/package").version;
 
-        glob(rootPath + "/build/content/posts/*.json", {
+        glob(globalVar.distFolder + "/content/posts/*.json", {
             cwd: "."
         }, function (err, files) {
             if (err) {
@@ -31,8 +31,8 @@ module.exports = function (rootPath) {
 
                     var metaData = {
                         title: fileData.title,
-                        description: resolvePaths.resolve(fileData.body, siteData.url),
-                        url: siteData.url + "/" + fileData.slug + "/",
+                        description: resolvePaths.resolve(fileData.body, globalVar.url),
+                        url: globalVar.url + "/" + fileData.slug + "/",
                         tags: (fileData.tags ? (fileData.tags.split ? fileData.tags.split(" ") : fileData.tags) : undefined), // tags can be either string or array
                         date: fileData.date
                     };
@@ -43,11 +43,11 @@ module.exports = function (rootPath) {
                 if (posts.length) {
 
                     var feed = new RSS({
-                        title: siteData.title,
-                        description: siteData.description,
+                        title: globalVar.title,
+                        description: globalVar.description,
                         generator: "Gulp " + gulpVersion,
-                        site_url: siteData.url,
-                        feed_url: siteData.url + "/rss.xml",
+                        site_url: globalVar.url,
+                        feed_url: globalVar.url + "/rss.xml",
                         ttl: 60
                     });
 
@@ -66,7 +66,7 @@ module.exports = function (rootPath) {
 
                     var xml = feed.xml();
 
-                    fs.writeFile(rootPath + "/build/rss.xml", xml, {
+                    fs.writeFile(globalVar.distFolder + "/rss.xml", xml, {
                         encoding: "utf8"
                     }, function (err) {
                         if (err) {

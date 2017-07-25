@@ -4,7 +4,6 @@ var gulp = require("gulp"),
     Promise = require("bluebird"),
     compileHandlebars = require("gulp-compile-handlebars"),
     rename = require("gulp-rename"),
-    fs = require("fs"),
     glob = require("glob"),
     moment = require("moment"),
     _ = require("lodash"),
@@ -13,15 +12,16 @@ var gulp = require("gulp"),
     dates = require("../lib/dates"),
     resolvePaths = require("../lib/paths"),
     compileDrafts = require("../lib/drafts"),
-    promiseList = require("../lib/promises");
+    promiseList = require("../lib/promises"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 module.exports = function (rootPath) {
     return new Promise(function(resolve, reject) {
-        var siteData = JSON.parse(fs.readFileSync(rootPath + "/site.json", "utf8"));
         var gulpVersion = require("gulp/package").version;
         var compileOptionsObj = compileOptions(rootPath);
 
-        glob(rootPath + "/build/content/**/*.json", {
+        glob(globalVar.distFolder + "/content/**/*.json", {
             cwd: "."
         }, function (err, files) {
             if (err) {
@@ -67,29 +67,29 @@ module.exports = function (rootPath) {
                         date: moment().format("YYYY-MM-DD"),
                         resourcePath: "",
                         generator: "Gulp " + gulpVersion,
-                        meta_title: siteData.title,
+                        meta_title: globalVar.title,
                         url: "",
-                        site: siteData,
+                        site: globalVar,
                         posts: posts,
                         pages: pages,
                         body_class: "home-template",
-                        rss: siteData.rss,
+                        rss: globalVar.rss,
                         allDates: dates.getAllDatesAsLinks("", allPosts),
                         allTags: tags.getAllTagsAsLinks("", allPosts)
                     };
 
                     var promises = [];
 
-                    if (siteData.maxItems && posts.length > siteData.maxItems) {
+                    if (globalVar.maxItems && posts.length > globalVar.maxItems) {
                         // how many pages do we need to create?
-                        var totalPages = Math.ceil(posts.length / siteData.maxItems);
+                        var totalPages = Math.ceil(posts.length / globalVar.maxItems);
 
                         // shorten posts
-                        var paginatedPosts = posts.splice(siteData.maxItems);
+                        var paginatedPosts = posts.splice(globalVar.maxItems);
 
                         for (var i = 1; i < totalPages; i++) {
                             var pageNumber = i + 1;
-                            var nextPosts = paginatedPosts.splice(0, siteData.maxItems);
+                            var nextPosts = paginatedPosts.splice(0, globalVar.maxItems);
 
                             // update the resource paths
                             nextPosts.forEach(function (post) {
@@ -104,7 +104,7 @@ module.exports = function (rootPath) {
                                 posts: nextPosts,
                                 resourcePath: "../..",
                                 url: "../..",
-                                rss: "../.." + siteData.rss,
+                                rss: "../.." + globalVar.rss,
                                 allDates: dates.getAllDatesAsLinks("../..", allPosts),
                                 allTags: tags.getAllTagsAsLinks("../..", allPosts)
                             });
@@ -124,10 +124,10 @@ module.exports = function (rootPath) {
                             pageTemplateData.totalPages = totalPages;
 
                             promises.push(new Promise(function (resolve, reject) {
-                                gulp.src(rootPath + "/src/templates/index.hbs")
+                                gulp.src(globalVar.editFolder + "/templates/index.hbs")
                                     .pipe(compileHandlebars(pageTemplateData, compileOptionsObj))
                                     .pipe(rename("index.html"))
-                                    .pipe(gulp.dest(rootPath + "/build/page/" + pageNumber))
+                                    .pipe(gulp.dest(globalVar.distFolder + "/page/" + pageNumber))
                                     .on("error", reject)
                                     .on("end", function () {
                                         resolve();
@@ -141,10 +141,10 @@ module.exports = function (rootPath) {
                     }
 
                     promises.unshift(new Promise(function (resolve, reject) {
-                        gulp.src(rootPath + "/src/templates/index.hbs")
+                        gulp.src(globalVar.editFolder + "/templates/index.hbs")
                             .pipe(compileHandlebars(templateData, compileOptionsObj))
                             .pipe(rename("index.html"))
-                            .pipe(gulp.dest(rootPath + "/build"))
+                            .pipe(gulp.dest(globalVar.distFolder))
                             .on("error", reject)
                             .on("end", resolve);
                     }));

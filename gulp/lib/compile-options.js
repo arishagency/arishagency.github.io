@@ -4,11 +4,13 @@ var moment = require("moment"),
     _ = require("lodash"),
     downsize = require("downsize"),
     downzero = require("./downzero"),
-    stringUtils = require("mout/string");
+    stringUtils = require("mout/string"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 module.exports = function (rootPath) {
     return {
-        batch: [rootPath + "/src/templates/partials"],
+        batch: [globalVar.editFolder + "/templates/partials"],
         checkContent: function (fileData) {
             var excerpt = stringUtils.stripHtmlTags(fileData.body);
             excerpt = excerpt.replace(/(\r\n|\n|\r)+/gm, " ");

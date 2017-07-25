@@ -4,7 +4,6 @@ var gulp = require("gulp"),
     Promise = require("bluebird"),
     compileHandlebars = require("gulp-compile-handlebars"),
     rename = require("gulp-rename"),
-    fs = require("fs"),
     path = require("path"),
     glob = require("glob"),
     moment = require("moment"),
@@ -14,15 +13,16 @@ var gulp = require("gulp"),
     dates = require("../lib/dates"),
     resolvePaths = require("../lib/paths"),
     compileDrafts = require("../lib/drafts"),
-    promiseList = require("../lib/promises");
+    promiseList = require("../lib/promises"),
+    fs = require("fs"),
+    globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 module.exports = function (rootPath) {
     return new Promise(function(resolve, reject) {
-        var siteData = JSON.parse(fs.readFileSync(rootPath + "/site.json", "utf8"));
         var gulpVersion = require("gulp/package").version;
         var compileOptionsObj = compileOptions(rootPath);
 
-        glob(rootPath + "/build/content/**/*.json", {
+        glob(globalVar.distFolder + "/content/**/*.json", {
             cwd: "."
         }, function (err, files) {
             if (err) {
@@ -51,7 +51,7 @@ module.exports = function (rootPath) {
                         tags: (fileData.tags ? tags.getTagsAsLinks("..", fileData.tags) : undefined),
                         date: fileData.date,
                         post_class: "post " + (fileData.template === "page.hbs" ? "page " : "") + (fileData.tags ? tagClasses : fileData.slug),
-                        author: (fileData.author ? siteData.authors[fileData.author] : ""),
+                        author: (fileData.author ? globalVar.authors[fileData.author] : ""),
                         meta: fileData
                     };
 
@@ -76,17 +76,17 @@ module.exports = function (rootPath) {
                         generator: "Gulp " + gulpVersion,
                         meta_title: fileData.title,
                         url: "..",
-                        site: siteData,
+                        site: globalVar,
                         post: metaData,
                         body_class: bodyClass,
-                        rss: ".." + siteData.rss
+                        rss: ".." + globalVar.rss
                     };
 
-                    var outDir = rootPath + "/build/" + path.basename(file).replace(/\.[^/.]+$/, "");
+                    var outDir = globalVar.distFolder + "/" + path.basename(file).replace(/\.[^/.]+$/, "");
 
                     templatesToCreate.push({
                         outDir: outDir,
-                        templateSrc: rootPath + "/src/templates/" + fileData.template,
+                        templateSrc: globalVar.editFolder + "/templates/" + fileData.template,
                         templateData: templateData
                     });
 
@@ -96,7 +96,7 @@ module.exports = function (rootPath) {
                     var promises = [];
                     templatesToCreate.forEach(function (templateToCreate) {
                         _.extend(templateToCreate.templateData.post, {
-                            site: siteData,
+                            site: globalVar,
                             allDates: dates.getAllDatesAsLinks("..", posts),
                             allTags: tags.getAllTagsAsLinks("..", posts)
                         });

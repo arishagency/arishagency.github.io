@@ -8,11 +8,7 @@ var gulp = require("gulp"),
     globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("concat-js", function () {
-    var jsFiles = [globalVar.editFolder + "/js/*.js"];
-    if (globalVar.concatJs) {
-        jsFiles = globalVar.concatJs;
-    }
-    return gulp.src(jsFiles)
+    return gulp.src(globalVar.concatJs)
         .pipe(concat("combined.js"))
         .pipe(uglify())
         .pipe(rename({
