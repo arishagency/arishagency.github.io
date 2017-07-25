@@ -22,7 +22,7 @@ It is similar to other static site generators in that it takes your Markdown con
 * Clobber for cleaning build directory
 * Save content as draft
 * Convert draft templates
-* Creates a `build/` directory with built content and assets
+* Creates a `dist/` directory with built content and assets
 
 ## Installation
 
@@ -66,10 +66,10 @@ The script creates the following files in the root of your site:
 * `package.json` - the node modules required by the generator
 * `gulpfile.js` - the gulp file for all the generator tasks
 * `site.json` - the metadata for your site
-* `src/content` - the content folder for the markdown files including some sample ones
-* `src/images` - a sample image
-* `src/sass` - a sample sass file
-* `src/templates` - a set of Handlebar templates for creating pages and posts
+* `edit/content` - the content folder for the markdown files including some sample ones
+* `edit/images` - a sample image
+* `edit/sass` - a sample sass file
+* `edit/templates` - a set of Handlebar templates for creating pages and posts
 
 Once created, the next thing is to install the required node modules:
 
@@ -83,7 +83,7 @@ Finally, you can run the generator to create the sample site:
 gulp
 ```
 
-The generator will create a `build/` folder with the compiled and optimised site ready to be deployed to your web server.
+The generator will create a `dist/` folder with the compiled and optimised site ready to be deployed to your web server.
 
 So putting it all together, the installation steps are:
 
@@ -129,7 +129,7 @@ The following tasks can also be run individually:
 
 * **develop** - a live-reload task for developing your site where changes are reloaded automatically including draft posts and pages - view at http://localhost:8080
 * **sass** - converts sass files to css
-* **clobber** - removes the `build/` directory
+* **clobber** - removes the `dist/` directory
 * **server** - view your built site locally at http://localhost:8080
 * **help** - lists available tasks
 
@@ -151,11 +151,11 @@ You are free to add properties to this file for use in your Handlebars templates
 
 ## Content
 
-Content must be added to the `src/content` directory.
+Content must be added to the `edit/content` directory.
 
 ### Pages and posts
 
-Pages and posts must created in the `src/content/pages` and `src/content/posts` directories.
+Pages and posts must created in the `edit/content/pages` and `edit/content/posts` directories.
 
 Pages and posts are Markdown files with a YAML front-matter block. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:
 
@@ -177,16 +177,16 @@ Between these triple-dashed lines, you can set predefined variables (see below).
 
 ### Assets
 
-Images, javascripts, fonts etc can all be added to the `src/` directory. You are free to create directories for these and name them accordingly.
+Images, javascripts, fonts etc can all be added to the `edit/` directory. You are free to create directories for these and name them accordingly.
 
-Content is created in the `src/content/pages` or `src/content/posts`.
+Content is created in the `edit/content/pages` or `edit/content/posts`.
 
 The generator is opinionated in that it expects certain files in particular directories.
 To help with this, [an example site](https://github.com/ducksoupdev/gulp-site-generator-example) is available that shows you how to structure your site with the generator.
 
 ### Templates
 
-Handlebars is used for rendering templates. Partials located in `src/templates/partials` are automatically available to your Handlebar templates.
+Handlebars is used for rendering templates. Partials located in `edit/templates/partials` are automatically available to your Handlebar templates.
 
 Helpers are available to your Handlebar templates and partials, these are:
 
