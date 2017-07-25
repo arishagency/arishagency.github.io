@@ -1,38 +1,15 @@
-
-# ignore SASS and Gulp caches
-
 node_modules
 .sass-cache
 bower_components
 jspm_packages
 *.log
-
-# Ignore passwords
-.secrets.json
-
-# ignore generated files
-
-dev
+coverage
+*.log
+.vscode
+.idea
+.tmp
 testing
 .publish
-
-#ignore sublime projects
-
-.sublime-project
-.sublime-workspace
-
-# ignore Compiled source
-
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# ignore Packages
-# (git has its own built in compression methods)
-
 *.7z
 *.dmg
 *.gz
@@ -41,15 +18,9 @@ testing
 *.rar
 *.tar
 *.zip
-
-# ignore Logs and databases
-
 *.log
 *.sql
 *.sqlite
-
-# ignore OS generated files
-
 .DS_Store
 .DS_Store?
 ._*
