@@ -1,26 +1,22 @@
 {{> header}}
-
-{{> navigation}}
-
 <div class="container">
-
+    {{> navigation}}
     {{#post}}
-        <div class="row">
-            <article>
-                <h1>{{title}}</h1>
-                <p class="post-meta">
-                    {{date format="MMMM Do YYYY"}}
-                    by <span>{{author.name}}</span>
-                    {{#if tags}} on {{{tags}}}{{/if}}
-                </p>
-                {{{body}}}
-            </article>
-            <aside>
-                {{> sidebar}}
-            </aside>
-        </div>
+    <div class="row">
+        <article>
+            <h1>{{title}}</h1>
+            <p class="post-meta">
+                {{date format="MMMM Do YYYY"}}
+                by <span>{{author.name}}</span>
+                {{#if tags}} on {{{tags}}}{{/if}}
+            </p>
+            {{{body}}}
+        </article>
+        <aside>
+            {{> sidebar}}
+        </aside>
+    </div>
     {{/post}}
-
+    {{> footer}}
 </div>
-
-{{> footer}}
+{{> js}}

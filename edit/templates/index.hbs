@@ -1,10 +1,10 @@
 {{> header}}
-
+<div class="container">
 {{> navigation}}
 
-<div class="container">
 
-    <header>
+
+<!--     <header>
         <h1>{{site.title}}</h1>
         {{#if tag}}
             <p>Posts tagged: {{tag}}</p>
@@ -15,19 +15,27 @@
                 <p>{{site.description}}</p>
             {{/if}}
         {{/if}}
-    </header>
+    </header> -->
 
     <div class="row">
-        <div class="main">
+    <div class="content col-md-3">
+    <h1>Lorem</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eveniet, iure similique quibusdam ut laudantium fuga aut minima assumenda ab?</p>
+    <p>Amet illo quia reprehenderit consectetur dicta hic omnis dolor animi quae accusamus ut, veniam eveniet corporis in obcaecati culpa possimus.</p>
+    <p>Doloribus nisi qui labore, consectetur nam similique quam reiciendis quos quisquam nulla dolorem, rem cumque quas aut fugit nostrum nesciunt.</p>
+    <p>Ullam consequatur, asperiores vero architecto repellat ipsa distinctio debitis, delectus, similique, quasi molestiae. Odit veritatis est culpa recusandae expedita, incidunt?</p>
+    </div>
+        <article class="content col-md-6">
             {{> loop}}
 
             {{> pagination}}
-        </div>
-        <aside>
+        </article>
+        <aside class="sidebar col-md-3">
             {{> sidebar}}
         </aside>
     </div>
-
+{{> footer}}
 </div>
 
-{{> footer}}
+
+{{> js}}
