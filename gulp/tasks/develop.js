@@ -22,7 +22,7 @@ gulp.task("livereload-html", function () {
 
 var _lto = 0;
 gulp.task("livereload-watch", function () {
-    gulp.watch([globalVar.editFolder + "/sass/**/*.scss"], ["uncss"]);
+    gulp.watch([globalVar.editFolder + "/sass/**/*.scss"], ["sass"]);
     gulp.watch([globalVar.editFolder + "/templates/**/*.hbs"], ["minify-html"]);
     gulp.watch([globalVar.editFolder + "/js/**/*.js"], ["concat-js"]);
     gulp.watch([globalVar.editFolder + "/images/**/*.{gif,jpg,png}"], ["image-min"]);
