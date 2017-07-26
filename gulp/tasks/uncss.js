@@ -13,14 +13,11 @@ gulp.task("uncss", ["copy-css"], function () {
     if (globalVar.uncssIgnore) {
         uncssIgnore = globalVar.uncssIgnore;
     }
-    return gulp.src(globalVar.editFolder + "/css/style.css")
+    return gulp.src(globalVar.distFolder + "/css/style.css")
         .pipe(uncss({
             html: glob.sync(globalVar.distFolder +"/**/*.html"),
             ignore: uncssIgnore
         }))
         .pipe(minifyCSS())
-        .pipe(rename({
-            suffix: ".min"
-        }))
         .pipe(gulp.dest(globalVar.distFolder +"/css"));
 });

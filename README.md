@@ -125,3 +125,4 @@ Helpers are available to your Handlebar templates and partials, these are:
 - [ ] redo README, smaller
 - [ ] link to `docs/`, list other tutorials we should add
 - [ ] finetune `gulp clean` (now it simply deletes folder, but it should be more granular than that)
+- [ ] optional, `uncss` and `publish` (maybe on tutorials)
