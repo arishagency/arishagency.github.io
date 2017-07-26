@@ -14,25 +14,22 @@
 - Creates a distribution folder with all content and assets
 - publishes distribution folder on gh-pages for quick deploy
 
-### Installation
+
+## Installation
 
 Go to the folder you'll add your new project on terminal and
 
 ```
-npm install -g gulp // in case you don't have gulp installed
+npm install -g gulp
 git clone https://github.com/lazy-8/base.git ProjectName
 cd ProjectName
 node install
 npm install
 bower install
 gulp
-
 ```
 
-#### Pending:
-- how to detach project from base on github
-
-### Critical Files and Folders
+## Critical Files and Folders
 
 * `package.json` - the node modules required by the generator
 * `gulpfile.js` - the gulp file for all the generator tasks
@@ -58,14 +55,11 @@ You are free to add properties to this file for use in your Handlebars templates
 * imageCompression (boolean) (optional) - a boolean value to enable/disable image compresssion on build
 * uncssIgnore (array) (optional) - a list of selectors that uncss should ignore (for example ".container" or "#my-element")
 
-#### Pending:
-- how to change `dist` and `edit` names
-
 ## Content
 
 Content must be added to the `edit/content` directory.
 
-### Pages and posts
+## Pages and posts
 
 Pages and posts must created in the `edit/content/pages` and `edit/content/posts` directories.
 
@@ -96,7 +90,7 @@ Content is created in the `edit/content/pages` or `edit/content/posts`.
 The generator is opinionated in that it expects certain files in particular directories.
 To help with this, [an example site](https://github.com/ducksoupdev/gulp-site-generator-example) is available that shows you how to structure your site with the generator.
 
-### Templates
+## Templates
 
 Handlebars is used for rendering templates. Partials located in `edit/templates/partials` are automatically available to your Handlebar templates.
 
@@ -118,11 +112,13 @@ Helpers are available to your Handlebar templates and partials, these are:
 
     `{{resolve "/favicon.ico"}}`
 
-### Soon
+## Soon
 
+- [ ] how to detach project from `base` on github, gulp publish (configuration?)
+- [ ] discuss uncss and how to handle it
 - [ ] KSS styleguide
+- [ ] how to change `dist` and `edit` names
 - [ ] error handling
 - [ ] redo README, smaller
 - [ ] link to `docs/`, list other tutorials we should add
 - [ ] finetune `gulp clean` (now it simply deletes folder, but it should be more granular than that)
-- [ ] optional, `uncss` and `publish` (maybe on tutorials)
