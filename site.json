@@ -1,6 +1,6 @@
 {
-  "title": "Site",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae dolorem magnam quos. Facere accusantium, accusamus quasi voluptas, atque facilis.",
+  "title": "Project Title",
+  "description": "Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!",
   "url": "",
   "rss": "/rss.xml",
   "maxItems": 6,
@@ -13,13 +13,14 @@
   ],
   "styleSheet": "style.css",
   "authors": {
-    "Nicholas Frota": {
+    "nicholas": {
       "name": "Nicholas Frota",
       "bio": "the anagram of my name is anarchist fool",
       "email": "info@nicholasfrota.com",
       "twitter": "nonlinear",
       "github": "nonlinear",
-      "instagram": "nonlinear"
+      "instagram": "nonlinear",
+      "pinterest": "nonlinearguy"
     }
   },
   "imageCompression": true

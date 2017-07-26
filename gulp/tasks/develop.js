@@ -23,11 +23,15 @@ gulp.task("livereload-html", function () {
 var _lto = 0;
 gulp.task("livereload-watch", function () {
     gulp.watch([globalVar.editFolder + "/sass/**/*.scss"], ["sass"]);
-    gulp.watch([globalVar.editFolder + "/templates/**/*.hbs"], ["minify-html"]);
+    gulp.watch([
+                globalVar.editFolder + "/templates/**/*.hbs",
+                globalVar.editFolder + "/content/**/*.md"
+                ], ["minify-html"]);
     gulp.watch([globalVar.editFolder + "/js/**/*.js"], ["concat-js"]);
-    gulp.watch([globalVar.editFolder + "/images/**/*.{gif,jpg,png}"], ["image-min"]);
-    gulp.watch([globalVar.editFolder + "/content/**/*.md"], ["minify-html"]);
-    gulp.watch([globalVar.distFolder + "/**/*.*"]).on("change", function (event) {
+    gulp.watch([globalVar.editFolder + "/images/**/*.{gif,jpg,png}"], ["image-min"])
+    gulp.watch([
+                globalVar.distFolder + "/**/*.*",
+                globalVar.editFolder + "/**/*.*"]).on("change", function (event) {
         gutil.log(gutil.colors.green("-"),event.path.replace(process.cwd(),""), gutil.colors.magenta(event.type));
         clearTimeout(_lto);
         _lto = setTimeout(function () {

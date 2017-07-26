@@ -7496,6 +7496,30 @@ button.close {
 header.header {
   border-bottom: solid 1px #ccc;
   padding-bottom: 15px; }
+  header.header a {
+    padding-right: 10px; }
+  header.header h1, header.header h2, header.header h3 {
+    display: inline-block;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none;
+    background: transparent; }
+    header.header h1:focus, header.header h2:focus, header.header h3:focus {
+      outline-width: 0;
+      outline: none;
+      outline-color: transparent;
+      outline-style: none; }
+  header.header p {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none;
+    background: transparent;
+    font-size: 12px; }
+    header.header p:focus {
+      outline-width: 0;
+      outline: none;
+      outline-color: transparent;
+      outline-style: none; }
 
 footer.footer {
   border-top: solid 1px #ccc;

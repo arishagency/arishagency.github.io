@@ -1,7 +1,13 @@
 
-    <header class="header">
-        <nav>
-            <a href="{{resolve "/"}}">Home</a>
-            <a href="{{resolve "/about"}}">About</a>
-        </nav>
-    </header>
+<header class="header">
+    <nav class="row">
+       <div class="col-md-8">
+            <h3><a href="{{resolve "/"}}">{{site.title}}</a></h3>
+        <a href="{{resolve "/about"}}">About</a>
+        <a href="{{resolve "/other"}}">Other</a>
+       </div>
+       <div class="col-md-4">
+        <p class="description">{{site.description}}</p>
+        </div>
+    </nav>
+</header>
