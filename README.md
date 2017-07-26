@@ -1,67 +1,38 @@
 # Static site generator using Gulp
 
-[![Build Status](https://travis-ci.org/ducksoupdev/gulp-site-generator.svg?branch=master)](https://travis-ci.org/ducksoupdev/gulp-site-generator)
-[![Coverage Status](https://coveralls.io/repos/ducksoupdev/gulp-site-generator/badge.svg?branch=master)](https://coveralls.io/r/ducksoupdev/gulp-site-generator?branch=master)
+- Converts [Markdown](https://daringfireball.net/projects/markdown/syntax) files to static HTML
+- [Handlebars](http://handlebarsjs.com) templates and partials
+- Sass compiling and minification
+- Css reducing (Uncss)
+- Javascript concatenating and minification
+- Asset copying
+- Image compression
+- HTML compression
+- RSS feed creation
+- Runs a local server that reloads with changes
+- Draft content
+- Creates a distribution folder with all content and assets
+- publishes distribution folder on gh-pages for quick deploy
 
-This is a simple static site generator which is perfect for a personal, blog or documentation site.
+### Installation
 
-It is similar to other static site generators in that it takes your Markdown content, renders it, optimises it and creates a production-ready site that can be served by Nginx, Apache or another web server.
-
-## Features
-
-* Convert Markdown files to static HTML
-* [Handlebars](http://handlebarsjs.com) templates and partials
-* Sass compiling and minification
-* Css reducing (Uncss)
-* Javascript concatenating and minification
-* Asset copying
-* Image compression
-* HTML compression
-* RSS feed creation
-* Server for viewing built site
-* Clean for cleaning build directory
-* Save content as draft
-* Convert draft templates
-* Creates a `dist/` directory with built content and assets
-
-## Installation
-
-This project is ideal when used as a Git sub-module or installed along-side your site so you can update it when new releases are made.
-
-### Getting the generator
-
-#### Git sub-module
+Go to the folder you'll add your new project on terminal and
 
 ```
-mkdir my-static-site
-cd my-static-site
-git init
-git submodule add https://github.com/ducksoupdev/gulp-site-generator.git tools
-```
-
-#### Straightforward checkout
-
-```
-mkdir my-static-site
-cd my-static-site
-git clone https://github.com/ducksoupdev/gulp-site-generator.git tools
-```
-
-### Installing the dependencies
-
-The generator requires Gulp to be installed globally. If you don't have it you can install it using:
+npm install -g gulp // in case you don't have gulp installed
+git clone https://github.com/lazy-8/base.git ProjectName
+cd ProjectName
+node install
+npm install
+bower install
+gulp
 
 ```
-npm install -g gulp
-```
 
-The generator has some dependencies that need to be installed using the following script:
+#### Pending:
+- how to detach project from base on github
 
-```
-node tools/install
-```
-
-The script creates the following files in the root of your site:
+### Critical Files and Folders
 
 * `package.json` - the node modules required by the generator
 * `gulpfile.js` - the gulp file for all the generator tasks
@@ -70,68 +41,6 @@ The script creates the following files in the root of your site:
 * `edit/images` - a sample image
 * `edit/sass` - a sample sass file
 * `edit/templates` - a set of Handlebar templates for creating pages and posts
-
-Once created, the next thing is to install the required node modules:
-
-```
-npm install
-```
-
-Finally, you can run the generator to create the sample site:
-
-```
-gulp
-```
-
-The generator will create a `dist/` folder with the compiled and optimised site ready to be deployed to your web server.
-
-So putting it all together, the installation steps are:
-
-```
-mkdir my-static-site
-cd my-static-site
-git init
-git submodule add https://github.com/lazy-8/base2.git tools
-npm install -g gulp
-node tools/install
-npm install
-gulp
-```
-
-## Updating
-
-Updating the generator submodule to the latest version can be done using git:
-
-```
-cd tools
-git remote update
-git pull
-cd ..
-```
-
-The generator has an update script that can then be run:
-
-```
-node tools/update
-```
-
-The script updates the `package.json` in the root of your site and updates any dependencies to the latest versions.
-
-## Tasks
-
-When you have created templates, content and assets, the default task will run the generator:
-
-```
-gulp
-```
-
-The following tasks can also be run individually:
-
-* **develop** - a live-reload task for developing your site where changes are reloaded automatically including draft posts and pages - view at http://localhost:8080
-* **sass** - converts sass files to css
-* **clean** - removes the `dist/` directory
-* **server** - view your built site locally at http://localhost:8080
-* **help** - lists available tasks
 
 ## Configuration
 
@@ -148,6 +57,9 @@ You are free to add properties to this file for use in your Handlebars templates
 * styleSheet (string) (optional) - the name of your main CSS file created by the sass task
 * imageCompression (boolean) (optional) - a boolean value to enable/disable image compresssion on build
 * uncssIgnore (array) (optional) - a list of selectors that uncss should ignore (for example ".container" or "#my-element")
+
+#### Pending:
+- how to change `dist` and `edit` names
 
 ## Content
 
@@ -206,8 +118,10 @@ Helpers are available to your Handlebar templates and partials, these are:
 
     `{{resolve "/favicon.ico"}}`
 
-Soon:
+### Soon
 
-- KSS styleguide
-- error handling
-- redo README, smaller
+- [ ] KSS styleguide
+- [ ] error handling
+- [ ] redo README, smaller
+- [ ] link to `docs/`, list other tutorials we should add
+- [ ] finetune `gulp clean` (now it simply deletes folder, but it should be more granular than that)
