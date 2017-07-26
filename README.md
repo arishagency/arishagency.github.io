@@ -81,7 +81,7 @@ Between these triple-dashed lines, you can set predefined variables (see below).
 * author (optional) - used for posts and the author key in the `site.json` file
 * status (optional) - set to 'draft' to ignore the page or post when running the generator
 
-### Assets
+## Assets
 
 Images, javascripts, fonts etc can all be added to the `edit/` directory. You are free to create directories for these and name them accordingly.
 
