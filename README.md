@@ -47,4 +47,4 @@ gulp
 ## More About the Project
 
 - Wanna know what's ahead? [`docs/todo.md`](https://github.com/lazy-8/base/blob/master/docs/todo.md)
-- Some cool projects we may or may not integrate [`docs/reference.md`](https://github.com/lazy-8/base/blob/master/docs/reference.md)
+- Some cool projects we may or may not integrate at [`docs/reference.md`](https://github.com/lazy-8/base/blob/master/docs/reference.md)
