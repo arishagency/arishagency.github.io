@@ -1,6 +1,6 @@
-## `lazy-8/base`
+### `lazy-8/base`
 
-> A Static site generator using Gulp
+**A Static site generator using Gulp**
 
 
 ## Features
