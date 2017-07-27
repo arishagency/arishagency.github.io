@@ -1,4 +1,4 @@
-# `lazy-8/base`
+### `lazy-8/base`
 ## A Static site generator using Gulp
 
 
@@ -20,8 +20,8 @@
 
 ## Installation
 
-1. open terminal
-2. navigate to folder where your new project will be
+1. Open terminal
+2. Navigate to folder where your new project will be
 3. Type:
 
 ```
@@ -36,15 +36,15 @@ gulp
 
 ## What's Next?
 
-Learn how to configure your project at `docs/configuration.md`
-Learn how to manage content at `docs/editing.md`
+1. Learn how to configure your project at [`docs/configuration.md`](https://github.com/lazy-8/base/blob/master/docs/configuration.md)
+1. Learn how to manage content at [`docs/editing.md`](https://github.com/lazy-8/base/blob/master/docs/editing.md)
 
 ## Frameworks and Integrations
 
-- `docs/bootstrap.md`
-- `docs/fontawesome.md`
+- [`docs/bootstrap.md`](https://github.com/lazy-8/base/blob/master/docs/bootstrap.md)
+- [`docs/fontawesome.md`](https://github.com/lazy-8/base/blob/master/docs/fontawesome.md)
 
 ## More About the Project
 
-- Wanna know what's ahead? `docs/todo.md`
-- Some cool projects we may or may not integrate `docs/reference.md`
+- Wanna know what's ahead? [`docs/todo.md`](https://github.com/lazy-8/base/blob/master/docs/todo.md)
+- Some cool projects we may or may not integrate [`docs/reference.md`](https://github.com/lazy-8/base/blob/master/docs/reference.md)
