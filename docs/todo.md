@@ -10,3 +10,9 @@
 - [ ] redo README, smaller
 - [ ] link to `docs/`, list other tutorials we should add
 - [ ] finetune `gulp clean` (now it simply deletes folder, but it should be more granular than that)
+- [ ] animatewithsass tutorial
+- [ ] modernizr, detectizr tutorial
+- [ ] chosen tutorial
+- [ ] clipboard tutorial
+- [ ] dataloops tutorial
+- [ ] barba.js tutorial

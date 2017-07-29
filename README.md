@@ -19,6 +19,11 @@
 - Creates a distribution folder with all content and assets
 - Publishes distribution folder on gh-pages for quick deploy
 
+## Requirements
+
+- [Node](https://nodejs.org/en/)
+- [Gulp](https://gulpjs.com)
+
 ## Installation
 
 1. Open terminal
@@ -26,10 +31,8 @@
 3. Type:
 
 ```
-npm install -g gulp
 git clone https://github.com/lazy-8/base.git ProjectName
 cd ProjectName
-node install
 npm install
 bower install
 gulp
@@ -37,13 +40,14 @@ gulp
 
 ## What's Next?
 
-1. Learn how to configure your project at [`docs/configuration.md`](https://github.com/lazy-8/base/blob/master/docs/configuration.md)
-1. Learn how to manage content at [`docs/editing.md`](https://github.com/lazy-8/base/blob/master/docs/editing.md)
+1. Make your project yours at [`docs/configuration.md`](https://github.com/lazy-8/base/blob/master/docs/configuration.md)
+1. Learn to manage content at [`docs/editing.md`](https://github.com/lazy-8/base/blob/master/docs/editing.md)
 
 ## Frameworks and Integrations
 
 - [`docs/bootstrap.md`](https://github.com/lazy-8/base/blob/master/docs/bootstrap.md)
 - [`docs/fontawesome.md`](https://github.com/lazy-8/base/blob/master/docs/fontawesome.md)
+- [`docs/foundation.md`](https://github.com/lazy-8/base/blob/master/docs/foundation.md)
 
 ## More About the Project
 
