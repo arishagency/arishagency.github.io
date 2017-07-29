@@ -47,5 +47,7 @@ gulp
 
 ## More About the Project
 
+[lazy-8/base](https://github.com/lazy-8/base) is a fork of [ducksoupdev/gulp-site-generator](https://github.com/ducksoupdev/gulp-site-generator).
+
 - Wanna know what's ahead? [`docs/todo.md`](https://github.com/lazy-8/base/blob/master/docs/todo.md)
 - Some cool projects we may or may not integrate at [`docs/reference.md`](https://github.com/lazy-8/base/blob/master/docs/reference.md)
