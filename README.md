@@ -42,6 +42,7 @@ gulp
 
 1. Make your project yours at [`docs/configuration.md`](https://github.com/lazy-8/base/blob/master/docs/configuration.md)
 1. Learn to manage content at [`docs/editing.md`](https://github.com/lazy-8/base/blob/master/docs/editing.md)
+1. Version control and quick publishing at [`docs/github.md`](https://github.com/lazy-8/base/blob/master/docs/github.md)
 
 ## Frameworks and Integrations
 
