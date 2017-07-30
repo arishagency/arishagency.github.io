@@ -4,6 +4,7 @@
 
 - [ ] discuss uncss and how to handle it
 - [ ] KSS styleguide
+- [ ] `gulp-real-favicon`
 - [ ] how to change `dist` and `edit` names
 - [ ] error handling
 - [ ] finetune `gulp clean` (now it simply deletes folder, but it should be more granular than that)

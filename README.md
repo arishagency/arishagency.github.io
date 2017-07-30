@@ -49,6 +49,12 @@ gulp
 - [`docs/bootstrap.md`](https://github.com/lazy-8/base/blob/master/docs/bootstrap.md)
 - [`docs/fontawesome.md`](https://github.com/lazy-8/base/blob/master/docs/fontawesome.md)
 - [`docs/foundation.md`](https://github.com/lazy-8/base/blob/master/docs/foundation.md)
+- [`docs/animate.md`](https://github.com/lazy-8/base/blob/master/docs/animate.md)
+
+##  Useful Utilities
+
+- If you use Sublime Text, install [`lazy-8/exo`](https://github.com/lazy-8/exo) for a fuckload of snippets to simplify your code
+- If you want to use custom fonts, install [`lazy-8/fontgen`](https://github.com/lazy-8/fontgen) to convert any `ttf` or `otf` font into webfont
 
 ## More About the Project
 
