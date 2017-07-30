@@ -19,6 +19,10 @@
 - [chartd - responsive, retina-compatible charts with just an img tag](http://chartd.co/)
 - [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
 
+## Data Resources
+
+- [Real content for all your designs](https://www.lists.design/)
+
 ## Cheatsheets
 
 - [Bootstrap 4 Cheat Sheet - The ultimate list of Bootstrap classes](https://hackerthemes.com/bootstrap-cheatsheet/#card-inverse)
