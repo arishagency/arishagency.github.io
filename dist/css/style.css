@@ -15721,20 +15721,10 @@ table {
     -ms-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out; }
-  table tr {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    transition: all 300ms ease-out; }
-    table tr:last-of-type td, table tr:last-of-type th {
-      border-bottom: solid 1px #eee; }
-    table tr:last-of-type:hover td, table tr:last-of-type:hover th {
-      border-bottom: solid 1px #ccc; }
-    table tr:hover {
-      background-color: #eee; }
-    table tr:hover td, table tr:hover th, table tr:hover + tr td, table tr:hover + tr th {
-      border-top: solid 1px #ccc; }
+  table tr:last-of-type td, table tr:last-of-type th {
+    border-bottom: solid 1px #eee; }
+  table tr:last-of-type:hover td, table tr:last-of-type:hover th {
+    border-bottom: solid 1px #ccc; }
 
 .container {
   max-width: 800px; }

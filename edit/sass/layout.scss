@@ -67,22 +67,11 @@ table {
         }
       }
     }
-    @include transition;
-    &:hover {
-      background-color: #eee;
-    }
-    &:hover, &:hover + tr {
-      td, th {
-        border-top: solid 1px #ccc;
-      }
-    }
   }
 }
-
 .container {
   max-width: 800px;
   @include media(800px, max) {
     width: 100%;
-
   }
 }
