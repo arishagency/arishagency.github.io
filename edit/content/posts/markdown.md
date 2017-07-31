@@ -2,7 +2,7 @@
 title:       Markdown Template
 slug:        markdown
 template:    post.hbs
-date:        2017-07-04
+date:        2017-07-31
 author:      nicholas
 ---
 # h1 Heading 8-)

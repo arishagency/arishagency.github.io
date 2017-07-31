@@ -50,3 +50,34 @@ a {
         }
     }
 }
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  td, th {
+    border-top: solid 1px #eee;
+    padding: 5px;
+    @include transition;
+  }
+  tr {
+    &:last-of-type {
+      td, th {
+        border-bottom: solid 1px #eee;
+      }
+      &:hover {
+        td, th {
+          border-bottom: solid 1px #ccc;
+        }
+      }
+    }
+    @include transition;
+    &:hover {
+      background-color: #eee;
+    }
+    &:hover, &:hover + tr {
+      td, th {
+        border-top: solid 1px #ccc;
+      }
+    }
+  }
+}

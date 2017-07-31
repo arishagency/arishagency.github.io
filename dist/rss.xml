@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Mon, 31 Jul 2017 22:29:42 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Markdown Template]]></title><description><![CDATA[<h1 id="h1-heading-8-">h1 Heading 8-)</h1>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Mon, 31 Jul 2017 22:36:53 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Markdown Template]]></title><description><![CDATA[<h1 id="h1-heading-8-">h1 Heading 8-)</h1>
 <h2 id="h2-heading">h2 Heading</h2>
 <h3 id="h3-heading">h3 Heading</h3>
 <h4 id="h4-heading">h4 Heading</h4>
@@ -181,99 +181,212 @@ Third paragraph of definition 2.
 <p>::: warning
 <em>here be dragons</em>
 :::</p>
-]]></description><link>/markdown/</link><guid isPermaLink="false">/markdown/</guid><pubDate>Tue, 04 Jul 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Some cool Anime]]></title><description><![CDATA[<p>Finding a good anime to watch can be daunting. There’s a lot out there and you shouldn’t spend your time on bullshit.</p>
-<p>Below is a list of the best ones I’ve watched so far, mostly on hulu.</p>
-<p>For those into it, I&#39;m more of a <em>shoujo</em> guy: That means I&#39;m not really into action-packed stories, and I&#39;m more interested in character&#39;s development.</p>
-<p>I tried to group series into genres, to set the overall mood: if you like one of the list, chances are you&#39;ll like the others too.</p>
-<hr>
-<h3 id="parapsychology">Parapsychology</h3>
-<div class="list">
+]]></description><link>/markdown/</link><guid isPermaLink="false">/markdown/</guid><pubDate>Mon, 31 Jul 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Configuring your Project]]></title><description><![CDATA[<h2 id="main-variables">Main Variables</h2>
+<p>The metadata file <code>site.json</code> contains all configuration required by your site. The following properties are used by the generator.
+You are free to add properties to this file for use in your Handlebars templates.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Type</th>
+<th>Priority</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>required</td>
+<td>the title of your site</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>required</td>
+<td>a description of your site</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>required</td>
+<td>the URL of your site</td>
+</tr>
+<tr>
+<td>rss</td>
+<td>string</td>
+<td>required</td>
+<td>the RSS feed XML file</td>
+</tr>
+<tr>
+<td>maxItems</td>
+<td>number</td>
+<td>optional</td>
+<td>the number to use for pagination</td>
+</tr>
+<tr>
+<td>editFolder</td>
+<td>string</td>
+<td>required</td>
+<td>folder where editable files reside (defaults to <code>./edit</code>)</td>
+</tr>
+<tr>
+<td>distFolder</td>
+<td>string</td>
+<td>required</td>
+<td>folder where publishable files reside (defaults to <code>./dist</code>)</td>
+</tr>
+<tr>
+<td>authors</td>
+<td>object</td>
+<td>optional</td>
+<td>an map of authors with metadata</td>
+</tr>
+<tr>
+<td>concatJs</td>
+<td>array</td>
+<td>optional</td>
+<td>a list of javascript files to combine and minify</td>
+</tr>
+<tr>
+<td>styleSheet</td>
+<td>string</td>
+<td>optional</td>
+<td>the name of your main CSS file created by the sass task</td>
+</tr>
+<tr>
+<td>imageCompression</td>
+<td>boolean</td>
+<td>optional</td>
+<td>a boolean value to enable/disable image compresssion on build</td>
+</tr>
+<tr>
+<td>uncssIgnore</td>
+<td>array</td>
+<td>optional</td>
+<td>a list of selectors that uncss should ignore (for example &quot;.container&quot; or &quot;#my-element&quot;)</td>
+</tr>
+</tbody>
+</table>
+]]></description><link>/configuration/</link><guid isPermaLink="false">/configuration/</guid><pubDate>Fri, 21 Jul 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Handlebars Editing]]></title><description><![CDATA[<h2 id="important-folders">Important Folders</h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>edit/content</code></td>
+<td>the content folder for the markdown files including some sample ones</td>
+</tr>
+<tr>
+<td><code>edit/images</code></td>
+<td>images to be compressed and converted</td>
+</tr>
+<tr>
+<td><code>edit/sass</code></td>
+<td>where your sass files go: default is <code>style.scss</code></td>
+</tr>
+<tr>
+<td><code>edit/templates</code></td>
+<td>a set of Handlebar templates for creating pages and posts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pages-and-posts">Pages and posts</h2>
+<p>Pages and posts must created in either <code>edit/content/pages</code> or <code>edit/content/posts</code> folders.</p>
+<p>Pages and posts are Markdown files with a YAML front-matter block. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:</p>
+<pre><code>---
+title: Home
+template: index.hbs
+---
 
-<em>   <a href="http://www.hulu.com/ghost-hound">Ghost Hound <img src="http://nonlinear.nyc/assets/images/anime/ghosthound.gif" alt=""></a> astral travel, the double, PTSD, mysteries of mind, get your wikipedia on
-</em>   <a href="http://www.hulu.com/serial-experiments-lain">Serial Experiments Lain <img src="http://nonlinear.nyc/assets/images/anime/lain.gif" alt=""></a> the double, digital personas, earth pulse, get your wikipedia on, must-watch for all psychonauts
-*   <a href="http://www.hulu.com/mushi-shi">Mushi-shi <img src="http://nonlinear.nyc/assets/images/anime/mushishi.gif" alt=""></a> yokai ecology, investigation, curses, village japan
-
-</div>
-
-<hr>
-<h3 id="vampire-ish">Vampire-ish</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/blood">Blood+ <img src="http://nonlinear.nyc/assets/images/anime/blood.gif" alt=""></a> hives vs families, badass heroine, family curses
-</em>   <a href="http://www.hulu.com/red-garden">Red Garden <img src="http://nonlinear.nyc/assets/images/anime/redgarden.gif" alt=""></a> feminism, gorgeous character design, family curses
-*   <a href="http://www.hulu.com/shiki">Shiki <img src="http://nonlinear.nyc/assets/images/anime/shiki.gif" alt=""></a> which side are you on?, lycanthropy, regret, angst, the ties that bind us
-
-</div>
-
-<hr>
-<h3 id="beautiful-fun-friendship">beautiful, fun, friendship</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/princess-jellyfish">Princess Jellyfish <img src="http://nonlinear.nyc/assets/images/anime/jellyfish.gif" alt=""></a> otaku girls, crossdressing, trains, the beautiful people, social anxiety, japanese dolls, jellyfish
-</em>   <a class="pending clip">Paradise Kiss <img src="http://nonlinear.nyc/assets/images/anime/paradisekiss.gif" alt=""></a> fashion, punk, transgenderism, cool as fuck (no link, sorry)
-<em>   <a href="http://www.hulu.com/honey-and-clover">Honey &amp; Clover <img src="http://nonlinear.nyc/assets/images/anime/honey.gif" alt=""></a> art school, inspiration, soul searching, compassion, relateable characters, rococó
-</em>   <a href="http://www.hulu.com/nana">Nana <img src="http://nonlinear.nyc/assets/images/anime/nana.gif" alt=""></a> rock n roll, feminism, friendship
-*   <a href="http://www.hulu.com/tsuritama">Tsuritama <img src="http://nonlinear.nyc/assets/images/anime/tsuritama.gif" alt=""></a> fishing, dragons, aliens, ducks, social anxiety
-
-</div>
-
-<hr>
-<h3 id="beautiful-action-based-invade-your-dreams">beautiful, action-based, invade your dreams</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/kurau-phantom-memory">Kurau Quantum Memory <img src="http://nonlinear.nyc/assets/images/anime/kurau.jpg" alt=""></a> quantum powers, androgyny, yearning, moon colony, scifi, cooperation
-</em>   <a href="http://www.hulu.com/eureka-seven">Eureka Seven <img src="http://nonlinear.nyc/assets/images/anime/eureka.gif" alt=""></a> ecology, fly with the winds, military insurrection, our place as humans. also: cool as fuck. There&#39;s a spinoff, <a href="http://www.hulu.com/eureka-seven-astral-ocean">Astral Ocean</a>
-
-</div>
-
-<hr>
-<h3 id="rebellion-and-insurrection">Rebellion and Insurrection</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/guilty-crown">Guilty Crown <img src="http://nonlinear.nyc/assets/images/anime/guilty.gif" alt=""></a> what lies in our hearts, responsibility, denial, dark fantasy
-</em>   <a href="http://www.hulu.com/rahxephon">Rahxephon <img src="http://nonlinear.nyc/assets/images/anime/rahxephon.gif" alt=""></a> alien possession, aztec/mayan monsters
-<em>   <a href="http://www.hulu.com/deadman-wonderland">Deadman Wonderland <img src="http://nonlinear.nyc/assets/images/anime/deadman.gif" alt=""></a> incarceration system, human pokemon, blood powers, insurrection
-</em>   <a href="http://www.hulu.com/fractale">Fractale <img src="http://nonlinear.nyc/assets/images/anime/fractale.gif" alt=""> </a> economics and politics of virtual reality
-<em>   <a href="http://www.hulu.com/attack-on-titan">Attack on Titan <img src="http://nonlinear.nyc/assets/images/anime/titan.gif" alt=""></a> giant titans, puny humans, spionage, survival tactics
-</em>   <a class="pending clip">zegapain <img src="http://nonlinear.nyc/assets/images/anime/zegapain.gif" alt=""></a> memories, life as repetition, quantum death, data clusters (sorry, no link)
-
-</div>
-
-<hr>
-<h3 id="make-a-move-you-loser">make a move, you loser</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/welcome-to-the-nhk">Welcome to NHK <img src="http://nonlinear.nyc/assets/images/anime/nhk.gif" alt=""></a> hikikomori, social anxiety, drugs
-</em>   <a href="http://www.hulu.com/tatami-galaxy">Tatami Galaxy <img src="http://nonlinear.nyc/assets/images/anime/tatami.gif" alt=""></a> neurotic thinking, the choices we make, the double, stylish animation
-
-</div>
-
-<hr>
-<h3 id="french-revolution-cross-dressing-sword-fighting-possibly-in-space-">french revolution, cross-dressing sword-fighting (possibly in space)</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/revolutionary-girl-utena">Revolutionary Girl Utena <img src="http://nonlinear.nyc/assets/images/anime/utena.gif" alt=""></a> feminism, lesbianism, crossdressing, school of revolution
-</em>   <a href="http://www.hulu.com/the-count-of-monte-cristo-gankutsuou">Gankutsuou <img src="http://nonlinear.nyc/assets/images/anime/gankutsuou.gif" alt=""></a> revenge, curses/diseases from deep space, the lies of our fathers, the lines of karma, gorgeous designs (to be seen in HD, large screen)
-*   <a href="http://www.hulu.com/le-chevalier-deon">Le Chevalier d&#39;Eon <img src="http://nonlinear.nyc/assets/images/anime/chevalier.gif" alt=""></a> golems, necromancy, a poet cabal, european intrigue, the gospel of righteous anger
-
-</div>
-
-<hr>
-<h3 id="after-life-shinigami">After-life, Shinigami</h3>
-<div class="list">
-
-<em>   <a href="http://www.hulu.com/noragami">Noragami <img src="http://nonlinear.nyc/assets/images/anime/noragami.gif" alt=""></a> little gods, regret, regalia, finding allies, reinvention
-</em>   <a href="http://www.hulu.com/death-note">Death Note <img src="http://nonlinear.nyc/assets/images/anime/deathnote.gif" alt=""></a> death gods, curses, frenemies, mind games. <strong>alert:</strong> as amazing as Death Note writing it is, it&#39;s very mysogynistic... most (if not all) guys are aloof geniuses, <em>all</em> women are emotional bimbos (except the death god one - yes, one is female)
-
-</div>
-
-<hr>
-<h3 id="a-genre-of-its-own">A genre of its own</h3>
-<div class="list">
-
-<em>   Paranoia Agent <img src="http://nonlinear.nyc/assets/images/anime/paranoia.gif" alt=""> detective story, natural disasters, writers block, the ties that binds us. Each chapter is animated from a different character point of view as investigation goes along, gorgeous! (no link, sorry)
-</em>   <a href="http://www.hulu.com/penguindrum">Penguindrum <img src="http://nonlinear.nyc/assets/images/anime/penguindrum.gif" alt=""></a> destiny, regret, brotherhood, terrorism, the sins of our fathers, incurable ilnesses, penguins
-<em>   Moyashimon <img src="http://nonlinear.nyc/assets/images/anime/moyashimon.gif" alt=""> germs as pokemon, queer, panspermia (no links, sorry)
-</em>   <a href="http://www.hulu.com/kill-la-kill">Kill la Kill <img src="http://nonlinear.nyc/assets/images/anime/killlakill.gif" alt=""></a> way too much skin, way too much references, way too much fan favors, slums, gangsters, blood-sucking symbiotic slutty dresses
-
-</div>]]></description><link>/anime/</link><guid isPermaLink="false">/anime/</guid><pubDate>Mon, 20 Jul 2015 04:00:00 GMT</pubDate></item></channel></rss>
+The rest of the template goes here as markdown text.
+</code></pre><p>Between these triple-dashed lines, you can set predefined variables (see below). These variables will then be available to you in any Handlebars templates or includes that the page or post in question relies on.</p>
+<table>
+<thead>
+<tr>
+<th>Frontmatter</th>
+<th>Priority</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>the title of the page or post</td>
+</tr>
+<tr>
+<td>template</td>
+<td>required</td>
+<td>the Handlebars template to use to compile the page or post</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>optional</td>
+<td>the URL slug which is used as the folder name when the page or post is built</td>
+</tr>
+<tr>
+<td>date</td>
+<td>optional</td>
+<td>used for posts and in the format <code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td>author</td>
+<td>optional</td>
+<td>used for posts and the author key in the <code>site.json</code> file</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional</td>
+<td>set to &#39;draft&#39; to ignore the page or post when running the generator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="managing-assets">Managing Assets</h2>
+<p>Images, javascripts, fonts etc can all be added to the <code>edit/</code> folder. You are free to create directories for these and name them accordingly.</p>
+<p>Content is created in the <code>edit/content/pages</code> or <code>edit/content/posts</code>.</p>
+<p>The generator is opinionated in that it expects certain files in particular directories.</p>
+<h2 id="using-partials">Using Partials</h2>
+<ol>
+<li>Write partial as HTML (not markdown) template</li>
+<li>Save partial on <code>edit/templates/partials</code> folder as an <code>*.hbs</code> file</li>
+<li>Call it with <code>{{&gt; FileName}}</code> (for instance, a partial named <code>header.hbs</code> is called with <code>{{&gt; header}}</code>)</li>
+</ol>
+<h2 id="helpers">Helpers</h2>
+<p>Helpers are available to your Handlebar templates and partials, these are:</p>
+<table>
+<thead>
+<tr>
+<th>Helper</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td>format a date in a particular format (uses Moment)</td>
+<td><code>{{date format=&quot;MMM Do, YYYY&quot;}}</code></td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>returns an excerpt of the text of your content, use &#39;words&#39; or &#39;characters&#39; to set the length</td>
+<td><code>{{excerpt words=&quot;50&quot;}}</code></td>
+</tr>
+<tr>
+<td>content</td>
+<td>returns an excerpt of content and is tag aware, use &#39;words&#39; or &#39;characters&#39; to set the length</td>
+<td><code>{{content words=&quot;50&quot;}}</code></td>
+</tr>
+<tr>
+<td>resolve</td>
+<td>resolves the path to an asset relative to the site root</td>
+<td><code>{{resolve &quot;/favicon.ico&quot;}}</code></td>
+</tr>
+</tbody>
+</table>
+]]></description><link>/editing/</link><guid isPermaLink="false">/editing/</guid><pubDate>Sat, 15 Jul 2017 04:00:00 GMT</pubDate></item></channel></rss>
