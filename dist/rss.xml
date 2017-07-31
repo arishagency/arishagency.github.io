@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Mon, 31 Jul 2017 22:36:53 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Markdown Template]]></title><description><![CDATA[<h1 id="h1-heading-8-">h1 Heading 8-)</h1>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Mon, 31 Jul 2017 22:45:05 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Github and Publishing]]></title><description><![CDATA[<h2 id="version-control">Version Control</h2>
+<p>In order to version control your repository, you need to first create a new repository and then point your local version to it.</p>
+<p>(this tutorial assumes you have your github credentials on this machine)</p>
+<ol>
+<li><a href="https://github.com/new">Create a new repository</a> on github</li>
+<li>Copy the <code>HTTPS</code> path (it should be <code>https://github.com/YourUsername/YourRepo.git</code>)</li>
+<li>Navigate to your project folder</li>
+<li>type <code>git remote set-url origin PASTEHERE</code> and enter</li>
+<li>Your project will push to your repo now</li>
+</ol>
+<h2 id="publishing">Publishing</h2>
+<p>Github has a cool feature that publishes your site quick and easy, when you push to a <code>gh-pages</code> branch.</p>
+<p>We automated the process a lil further with <code>gulp publish</code>. It creates and pushes whatever is on <code>./dist</code> folder to <code>gh-pages</code> seamlessly. Your project can now be seen at <code>YourUsername.github.io/YourRepo/</code></p>
+<h2 id="domains">Domains</h2>
+<pre><code>How to use github with domains... since it transforms `./dist` to root, we need to update `clean.js` first
+</code></pre>]]></description><link>/github/</link><guid isPermaLink="false">/github/</guid><pubDate>Tue, 01 Aug 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Markdown Template]]></title><description><![CDATA[<h1 id="h1-heading-8-">h1 Heading 8-)</h1>
 <h2 id="h2-heading">h2 Heading</h2>
 <h3 id="h3-heading">h3 Heading</h3>
 <h4 id="h4-heading">h4 Heading</h4>
