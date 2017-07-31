@@ -44,6 +44,7 @@
 ## Policies
 
 - [A Simple Git branching model](https://gist.github.com/17twenty/6733076)
+- [How To Protect Your Users With The Privacy By Design Framework](https://www.smashingmagazine.com/2017/07/privacy-by-design-framework/)
 
 ## Print
 
