@@ -15690,9 +15690,6 @@ footer.footer {
   border-top: solid 1px #ccc;
   padding-top: 15px; }
 
-body {
-  padding: 15px 0; }
-
 .steps li {
   font-size: 18px;
   padding-bottom: 10px; }
@@ -15738,3 +15735,9 @@ table {
       background-color: #eee; }
     table tr:hover td, table tr:hover th, table tr:hover + tr td, table tr:hover + tr th {
       border-top: solid 1px #ccc; }
+
+.container {
+  max-width: 800px; }
+  @media screen and (max-width: 800px) {
+    .container {
+      width: 100%; } }
