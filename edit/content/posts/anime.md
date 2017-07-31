@@ -1,11 +1,9 @@
 ---
 title:       Some cool Anime
-description: some anime I like
-category:    resources
 slug:        anime
 template:    post.hbs
 date:        2015-07-20
-author:      Nicholas Frota
+author:      nicholas
 ---
 Finding a good anime to watch can be daunting. There’s a lot out there and you shouldn’t spend your time on bullshit.
 

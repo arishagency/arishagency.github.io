@@ -1,37 +1,20 @@
-<div class="container">
 {{> header}}
-
-{{> navigation}}
-
-
-
-<!--     <header>
-        <h1>{{site.title}}</h1>
-        {{#if tag}}
-            <p>Posts tagged: {{tag}}</p>
-        {{else}}
-            {{#if dateStr}}
-                <p>Posts dated: {{dateStr}}</p>
-            {{else}}
-                <p>{{site.description}}</p>
-            {{/if}}
-        {{/if}}
-    </header> -->
-
+<div class="container">
     <div class="row">
         <article class="main col-md-8">
-            {{> loop}}
-
-            {{> pagination}}
+        <h1>Congratulations</h1>
+        <h3>Your project is running, so what's Next?</h3>
+        <hr>
+<ol class="steps">
+    <li>Personalize your project at <code><a href="https://github.com/lazy-8/base/blob/master/docs/configuration.md">docs/configuration.md</a></code></li>
+    <li>Learn to create posts, pages, templates, loops and partials at <code><a href="https://github.com/lazy-8/base/blob/master/docs/editing.md">docs/editing.md</a></code></li>
+    <li>Version control and quick publishing at <code><a href="https://github.com/lazy-8/base/blob/master/docs/github.md">docs/github.md</a></code></li>
+</ol>
         </article>
         <aside class="sidebar col-md-4">
-            {{> sidebar}}
+            {{> loop}}
+            {{> pagination}}
         </aside>
     </div>
-
-
-
-{{> footer}}
-
 </div>
 {{> js}}

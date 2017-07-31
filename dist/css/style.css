@@ -15693,6 +15693,10 @@ footer.footer {
 body {
   padding: 15px 0; }
 
+.steps li {
+  font-size: 18px;
+  padding-bottom: 10px; }
+
 a {
   color: #666; }
   a:hover {

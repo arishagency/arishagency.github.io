@@ -41,9 +41,12 @@ Content is created in the `edit/content/pages` or `edit/content/posts`.
 
 The generator is opinionated in that it expects certain files in particular directories.
 
-## Handlebars Templates
+## Using Partials
 
-Partials located in `edit/templates/partials` are automatically available to your Handlebar templates.
+1. Write partial as HTML (not markdown) template
+1. Save partial on `edit/templates/partials` folder as an `*.hbs` file
+1. Call it with `{{> FileName}}` (for instance, a partial named `header.hbs` is called with `{{> header}}`)
+
 
 ## Helpers
 
