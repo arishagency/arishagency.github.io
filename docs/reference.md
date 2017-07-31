@@ -41,6 +41,10 @@
 - [in-view.js - Get notified when a DOM element enters or exits the viewport](https://camwiegert.github.io/in-view/)
 - [ScrollTrigger - Scroll based animations with ease](https://terwanerik.github.io/ScrollTrigger/)
 
+## Policies
+
+- [A Simple Git branching model](https://gist.github.com/17twenty/6733076)
+
 ## Print
 
 - [BafS/Gutenberg: Modern framework to print the web correctly.](https://github.com/BafS/Gutenberg)
