@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Mon, 31 Jul 2017 23:00:19 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Github and Publishing]]></title><description><![CDATA[<h2 id="version-control">Version Control</h2>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Tue, 01 Aug 2017 14:45:48 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Github and Publishing]]></title><description><![CDATA[<h2 id="version-control">Version Control</h2>
 <p>In order to version control your repository, you need to first create a new repository and then point your local version to it.</p>
 <p>(this tutorial assumes you have your github credentials on this machine)</p>
 <ol>
@@ -196,7 +196,15 @@ Third paragraph of definition 2.
 <p>::: warning
 <em>here be dragons</em>
 :::</p>
-]]></description><link>/markdown/</link><guid isPermaLink="false">/markdown/</guid><pubDate>Mon, 31 Jul 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Configuring your Project]]></title><description><![CDATA[<h2 id="main-variables">Main Variables</h2>
+]]></description><link>/markdown/</link><guid isPermaLink="false">/markdown/</guid><pubDate>Mon, 31 Jul 2017 04:00:00 GMT</pubDate></item><item><title><![CDATA[Configuring your Project]]></title><description><![CDATA[<h2 id="making-this-project-yours">Making this Project Yours</h2>
+<ol>
+<li>Edit <code>site.json</code> with your credentials (see <strong>Main Variables</strong> below)</li>
+<li>Open <code>./edit/sass/layout.scss</code> and start with a blank slate by deleting all rules inside it. Go for it.</li>
+<li>Also, take control of <code>./edit/sass/style.scss</code> by adding as many project imports you need.</li>
+<li><a href="editing">Learn how to edit content</a></li>
+<li><a href="github">Create your own git repository</a></li>
+</ol>
+<h2 id="main-variables">Main Variables</h2>
 <p>The metadata file <code>site.json</code> contains all configuration required by your site. The following properties are used by the generator.
 You are free to add properties to this file for use in your Handlebars templates.</p>
 <table>

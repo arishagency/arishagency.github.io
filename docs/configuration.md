@@ -1,5 +1,13 @@
 # Configuration
 
+## Making this Project Yours
+
+1. Edit `site.json` with your credentials (see **Main Variables** below)
+1. Open `./edit/sass/layout.scss` and start with a blank slate by deleting all rules inside it. Go for it.
+1. Also, take control of `./edit/sass/style.scss` by adding as many project imports you need.
+1. Learn how to edit content on [`./docs/editing.md`](https://github.com/lazy-8/base/blob/master/docs/editing.md)
+1. Create your own git repository at [`./docs/github.md`](https://github.com/lazy-8/base/blob/master/docs/github.md)
+
 ## Main Variables
 
 The metadata file `site.json` contains all configuration required by your site. The following properties are used by the generator.
