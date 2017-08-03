@@ -58,6 +58,7 @@
 - [Really Good Emails on CodePen](https://codepen.io/reallygoodemails/)
 - [Email Lab: A Starter Kit for HTML Emails | Sparkbox | Web Design and Development](https://seesparkbox.com/foundry/email_lab_a_starter_kit_for_html_emails)
 - [groupon/gleemail: Making email template development fun! Sort of!](https://github.com/groupon/gleemail)
+- [Email Design Workflow](http://www.leemunroe.com/email-design-workflow/)
 
 ## Infographs
 
@@ -77,11 +78,13 @@
 
 - [Twine / An open-source tool for telling interactive, nonlinear stories](http://twinery.org/)
 
-## Cool Effects
+## Cool Tools
 
 - [(12) Tinycon - Favicon Alert Bubbles](http://blog.tommoor.com/tinycon/)
+- [Instant.io - Streaming file transfer over WebTorrent](https://instant.io/)
 - [Midnight.js - Switch fixed headers on the fly](http://aerolab.github.io/midnight.js/)
 - [Instacam by xavierfoucrier](https://xavierfoucrier.github.io/instacam/)
+- [Cute File Browser with jQuery and PHP - Tutorialzine](https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php)
 
 ## Promotion
 
