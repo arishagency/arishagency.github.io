@@ -14,11 +14,6 @@
 - [Performance Budget Builder](https://codepen.io/bradfrost/pen/EPQVBp)
 - [Hero Patterns | Free repeatable SVG background patterns for your web projects](http://www.heropatterns.com/)
 
-## Charts
-
-- [chartd - responsive, retina-compatible charts with just an img tag](http://chartd.co/)
-- [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
-
 ## Data Resources
 
 - [Real content for all your designs](https://www.lists.design/)
@@ -41,6 +36,10 @@
 - [in-view.js - Get notified when a DOM element enters or exits the viewport](https://camwiegert.github.io/in-view/)
 - [ScrollTrigger - Scroll based animations with ease](https://terwanerik.github.io/ScrollTrigger/)
 
+## 3D
+
+- [Structure Sensor - 3D scanning, augmented reality, and more for mobile devices](https://structure.io/?utm_medium=cpc&utm_source=twitter&utm_campaign=3dprintingkeywords#)
+
 ## Policies
 
 - [A Simple Git branching model](https://gist.github.com/17twenty/6733076)
@@ -58,7 +57,32 @@
 - [How to make email confirmation a little easier for your users](https://stories.betalist.com/how-to-make-email-confirmation-a-little-easier-for-your-users-b26125ce3b42)
 - [Really Good Emails on CodePen](https://codepen.io/reallygoodemails/)
 - [Email Lab: A Starter Kit for HTML Emails | Sparkbox | Web Design and Development](https://seesparkbox.com/foundry/email_lab_a_starter_kit_for_html_emails)
+- [groupon/gleemail: Making email template development fun! Sort of!](https://github.com/groupon/gleemail)
+
+## Infographs
+
+- [RAWGraphs](http://rawgraphs.io/)
+- [chartd - responsive, retina-compatible charts with just an img tag](http://chartd.co/)
+- [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
 
 ## Events
 
 - ["Add to Calendar" button for websites and newsletters - AddEvent.com](https://www.addevent.com)
+
+## Maps
+
+- [Map Glyphs | The Ultimate CSS Map Font](http://mapglyphs.com/)
+
+## Writing
+
+- [Twine / An open-source tool for telling interactive, nonlinear stories](http://twinery.org/)
+
+## Cool Effects
+
+- [(12) Tinycon - Favicon Alert Bubbles](http://blog.tommoor.com/tinycon/)
+- [Midnight.js - Switch fixed headers on the fly](http://aerolab.github.io/midnight.js/)
+- [Instacam by xavierfoucrier](https://xavierfoucrier.github.io/instacam/)
+
+## Promotion
+
+- [GifBook — Animated GIFs as Flipbooks](https://gifbook.io/)
