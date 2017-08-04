@@ -29,12 +29,18 @@
 - [MoveTo.js](https://hsnaydd.github.io/moveTo/demo/)
 - [Bulma: a modern CSS framework based on Flexbox](http://bulma.io/#)
 - [Bricks.js](http://callmecavs.com/bricks.js/)
-- [Labella.js](http://twitter.github.io/labella.js/index.html)
 - [Cubism.js](http://square.github.io/cubism/)
 - [Loud Links - A simple tiny Javascript library to add interaction sounds to your website.](https://loudlinks.rocks/)
 - [dummi](http://dummi.io/)
 - [in-view.js - Get notified when a DOM element enters or exits the viewport](https://camwiegert.github.io/in-view/)
 - [ScrollTrigger - Scroll based animations with ease](https://terwanerik.github.io/ScrollTrigger/)
+
+## Typography
+
+- [Archetype, Digital Typography Design Tool by Our Own Thing, using Google web fonts](http://www.archetypeapp.com/)
+- [Labella.js](http://twitter.github.io/labella.js/index.html)
+- [Methods for Contrasting Text Against Backgrounds | CSS-Tricks](https://css-tricks.com/methods-contrasting-text-backgrounds/)
+- [Midnight.js - Switch fixed headers on the fly](http://aerolab.github.io/midnight.js/)
 
 ## 3D
 
@@ -82,7 +88,6 @@
 
 - [(12) Tinycon - Favicon Alert Bubbles](http://blog.tommoor.com/tinycon/)
 - [Instant.io - Streaming file transfer over WebTorrent](https://instant.io/)
-- [Midnight.js - Switch fixed headers on the fly](http://aerolab.github.io/midnight.js/)
 - [Instacam by xavierfoucrier](https://xavierfoucrier.github.io/instacam/)
 - [Cute File Browser with jQuery and PHP - Tutorialzine](https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php)
 
