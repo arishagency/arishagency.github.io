@@ -34,6 +34,7 @@
 - [dummi](http://dummi.io/)
 - [in-view.js - Get notified when a DOM element enters or exits the viewport](https://camwiegert.github.io/in-view/)
 - [ScrollTrigger - Scroll based animations with ease](https://terwanerik.github.io/ScrollTrigger/)
+- [vesparny/fair-analytics: 📊 An analytics server that doesn't undermine user's privacy](https://github.com/vesparny/fair-analytics)
 
 ## Typography
 
@@ -90,6 +91,7 @@
 - [Instant.io - Streaming file transfer over WebTorrent](https://instant.io/)
 - [Instacam by xavierfoucrier](https://xavierfoucrier.github.io/instacam/)
 - [Cute File Browser with jQuery and PHP - Tutorialzine](https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php)
+- [parallax/svg-animation-tools: An awesome workflow for animated SVGs with Adobe Illustrator](https://github.com/parallax/svg-animation-tools)
 
 ## Promotion
 
