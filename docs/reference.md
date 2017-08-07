@@ -92,6 +92,7 @@
 - [Instacam by xavierfoucrier](https://xavierfoucrier.github.io/instacam/)
 - [Cute File Browser with jQuery and PHP - Tutorialzine](https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php)
 - [parallax/svg-animation-tools: An awesome workflow for animated SVGs with Adobe Illustrator](https://github.com/parallax/svg-animation-tools)
+- [Removing that ugly :focus ring (and keeping it too)](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2)
 
 ## Promotion
 
