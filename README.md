@@ -50,6 +50,7 @@ gulp
 - [`docs/fontawesome.md`](https://github.com/lazy-8/base/blob/master/docs/fontawesome.md)
 - [`docs/foundation.md`](https://github.com/lazy-8/base/blob/master/docs/foundation.md)
 - [`docs/animate.md`](https://github.com/lazy-8/base/blob/master/docs/animate.md)
+- [`docs/modernizr.md`](https://github.com/lazy-8/base/blob/master/docs/modernizr.md)
 
 ##  Useful Utilities
 
