@@ -80,6 +80,7 @@
 ## Maps
 
 - [Map Glyphs | The Ultimate CSS Map Font](http://mapglyphs.com/)
+- [React Simple Maps](https://www.react-simple-maps.io/)
 
 ## Writing
 
@@ -93,6 +94,7 @@
 - [Cute File Browser with jQuery and PHP - Tutorialzine](https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php)
 - [parallax/svg-animation-tools: An awesome workflow for animated SVGs with Adobe Illustrator](https://github.com/parallax/svg-animation-tools)
 - [Removing that ugly :focus ring (and keeping it too)](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2)
+- [Lazy loading images using Intersection Observer | Dean Hume](https://deanhume.com/Home/BlogPost/lazy-loading-images-using-intersection-observer/10163)
 
 ## Promotion
 
