@@ -7,7 +7,7 @@ var gulp = require("gulp"),
     globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("sass", function () {
-    return gulp.src(globalVar.editFolder + "/sass/**/style.scss")
+    return gulp.src(globalVar.editFolder + "/sass/style.scss")
 .pipe(customPlumber('SCSS Error'))
         .pipe(sass())
         .pipe(gulp.dest(globalVar.distFolder + "/css"));
