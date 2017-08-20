@@ -24,6 +24,6 @@
     }
   },
   "imageCompression": true,
-  "ghPagesBranch": "master",
-  "ghPagesRemoteUrl": "https://github.com/attilagk/attilagk.github.io.git"
+  "ghPagesBranch": "gh-pages",
+  "ghPagesRemoteUrl": "https://github.com/attilagk/base.git"
 }
