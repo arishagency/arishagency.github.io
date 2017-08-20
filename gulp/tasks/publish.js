@@ -8,5 +8,5 @@ ghPages = require("gulp-gh-pages")
 
 gulp.task("publish", function() {
   return gulp.src(globalVar.distFolder + "/**/*")
-  .pipe(ghPages());
+  .pipe(ghPages({branch: globalVar.ghPagesBranch, remoteUrl: globalVar.ghPagesRemoteUrl}));
 });

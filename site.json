@@ -23,5 +23,7 @@
       "pinterest": "nonlinearguy"
     }
   },
-  "imageCompression": true
+  "imageCompression": true,
+  "ghPagesBranch": "master",
+  "ghPagesRemoteUrl": "https://github.com/attilagk/attilagk.github.io.git"
 }
