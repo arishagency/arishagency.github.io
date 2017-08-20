@@ -1,8 +1,8 @@
 ---
-title:       Building and Publishing the Site on GitHub
+title:       Building the Site and Publishing on GitHub
 slug:        build-publish
 template:    post.hbs
-date:        2017-08-01
+date:        2017-08-20
 author:      nicholas
 ---
 
@@ -10,7 +10,8 @@ author:      nicholas
 
 Suppose that your GitHub user name is `myUserName`, that you want to name your new website project as `myProject` and to publish the site using the [GitHub Pages](https://pages.github.com/) free web hosting service.  You have the choice to publish your site
 * either as a [project site](https://help.github.com/articles/user-organization-and-project-pages/#project-pages)
-* or a [user site](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages)
+* or as a [user site](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages)
+
 Note that only one *user site* is allowed for each GitHub account but multiple *project sites* are possible.
 
 For both options (*project* or *user site*) you will need the first two of these three git repositories; for a *user site* you'll also need the third:
