@@ -72,6 +72,7 @@
 - [RAWGraphs](http://rawgraphs.io/)
 - [chartd - responsive, retina-compatible charts with just an img tag](http://chartd.co/)
 - [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
+- [Pts.js Demos](https://ptsjs.org/demo/?name=circle.intersectLine2D)
 
 ## Events
 
