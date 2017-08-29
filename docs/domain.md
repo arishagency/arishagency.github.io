@@ -23,3 +23,9 @@ You need to point `gulp publish` to push to `master` instead:
 3 Wait til your name servers update: `dig yourdomain.com +nostats +nocomments +nocmd`
 
 (this is a variation of [this Stack Overflow answer](https://stackoverflow.com/a/9123911/3754357))
+
+## Tips and Reference
+
+- More on [project sites](https://help.github.com/articles/user-organization-and-project-pages/#project-pages)
+- More on [user sites](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages)
+- Since it counts as root, only one *user site* is allowed for each GitHub account, so if you have different projects, consider [creating an organization](https://github.com/organizations/new) per new project.
