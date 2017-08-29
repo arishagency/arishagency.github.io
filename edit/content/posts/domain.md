@@ -27,4 +27,9 @@ You need to point `gulp publish` to push to `master` instead:
 2. In your DNS manager, setup two `cname` records. One for the root apex (@) and one for www. Both point to `username.github.io`. If your DNS provider does **NOT** support `ALIAS` records on the root apex (@), simply create `A` records that point to `192.30.252.153` and `192.30.252.154`
 3 Wait til your name servers update: `dig yourdomain.com +nostats +nocomments +nocmd`
 
-(this is a variation of [this Stack Overflow answer](https://stackoverflow.com/a/9123911/3754357))
+## Tips and Reference
+
+- [Custom domain for GitHub project pages - Stack Overflow](https://stackoverflow.com/a/9123911/3754357)
+- More on [project sites](https://help.github.com/articles/user-organization-and-project-pages/#project-pages)
+- More on [user sites](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages)
+- Since it counts as root, only one *user site* is allowed for each GitHub account, so if you have different projects, consider [creating an organization](https://github.com/organizations/new) per new project
