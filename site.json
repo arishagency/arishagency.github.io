@@ -24,6 +24,5 @@
     }
   },
   "imageCompression": true,
-  "ghPagesBranch": "gh-pages",
-  "ghPagesRemoteUrl": "https://github.com/lazy-8/base.git"
+  "ghPagesBranch": "gh-pages"
 }
