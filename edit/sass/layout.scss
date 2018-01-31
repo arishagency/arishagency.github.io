@@ -38,22 +38,3 @@ h2 {
 	padding-top: 60px;
 	margin-top: 60px;
 }
-
-.core {
-	display: table;
-	width: 100%;
-	ul {
-		padding: 20px;
-	}
-	& > * {
-		display: table-cell;
-		width: (100% / 3) !important;
-		&:not(:last-of-type) {
-			border-right: solid 1px white;
-			padding-right: 30px;
-		}
-		&:not(:first-of-type) {
-			padding-left: 30px;
-		}
-	}
-}
