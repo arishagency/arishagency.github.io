@@ -1,1 +1,59 @@
-@include font-face(chunkfive);
+
+@include font-face(pistilli);
+@include font-face(Akrobat-Regular);
+
+body {
+	color: white;
+	font-family: Akrobat-Regular;
+	font-size: 20px;
+	padding: 60px 0;
+}
+h1 {
+	font-family: pistilli;
+}
+a {
+	text-decoration: underline;
+	color: #eee;
+	@include transition;
+	&:hover {
+		color: white;
+	}
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 110%;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: pistilli;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.core, footer, .pitch {
+	border-top: solid 1px white;
+	padding-top: 60px;
+	margin-top: 60px;
+}
+
+.core {
+	display: table;
+	width: 100%;
+	ul {
+		padding: 20px;
+	}
+	& > * {
+		display: table-cell;
+		width: (100% / 3) !important;
+		&:not(:last-of-type) {
+			border-right: solid 1px white;
+			padding-right: 30px;
+		}
+		&:not(:first-of-type) {
+			padding-left: 30px;
+		}
+	}
+}

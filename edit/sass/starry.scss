@@ -1,12 +1,12 @@
 body {
      background: #171d25;
      margin: 0;
-	// height:800vh;
     background: linear-gradient(2deg, #090905 0%, #1f230a 60%, #104242 100%);
 }
 .canvas-wrap {
 	position:relative;
 	padding:10%;
+	z-index: -100;
 	position: fixed;
     margin: auto;
     top: 0%;
