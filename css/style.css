@@ -5877,20 +5877,6 @@ h2 {
   padding-top: 60px;
   margin-top: 60px; }
 
-.core {
-  display: table;
-  width: 100%; }
-  .core ul {
-    padding: 20px; }
-  .core > * {
-    display: table-cell;
-    width: 33.33333% !important; }
-    .core > *:not(:last-of-type) {
-      border-right: solid 1px white;
-      padding-right: 30px; }
-    .core > *:not(:first-of-type) {
-      padding-left: 30px; }
-
 body {
   background: #171d25;
   margin: 0;
@@ -5917,3 +5903,18 @@ body {
   height: 110%;
   width: 110%;
   border: 1px solid yellow; }
+
+@media screen and (min-width: 800px) {
+  .core {
+    display: table;
+    width: 100%; }
+    .core ul {
+      padding: 20px; }
+    .core > * {
+      display: table-cell;
+      width: 33.33333% !important; }
+      .core > *:not(:last-of-type) {
+        border-right: solid 1px white;
+        padding-right: 30px; }
+      .core > *:not(:first-of-type) {
+        padding-left: 30px; } }
