@@ -1,0 +1,28 @@
+body {
+     background: #171d25;
+     margin: 0;
+	// height:800vh;
+    background: linear-gradient(2deg, #090905 0%, #1f230a 60%, #104242 100%);
+}
+.canvas-wrap {
+	position:relative;
+	padding:10%;
+	position: fixed;
+    margin: auto;
+    top: 0%;
+    left: 0%;
+	height:100%;
+	width:100%;
+	box-sizing:border-box;
+}
+
+#canvas {
+	position: fixed;  
+/* 	position: relative; */
+    margin: auto;
+    top: -5%;
+    left: -5%;
+	height:110%;
+	width:110%;
+	border:1px solid yellow;
+}
