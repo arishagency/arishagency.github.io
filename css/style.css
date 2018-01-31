@@ -5815,9 +5815,9 @@ button.close {
     display: none !important; } }
 
 @font-face {
-  font-family: chunkfive;
-  src: url("../fonts/chunkfive.eot");
-  src: url("../fonts/chunkfive.eot?#iefix") format("embedded-opentype"), url("../fonts/chunkfive.woff") format("woff"), url("../fonts/chunkfive.ttf") format("truetype"), url("../fonts/chunkfive.svg#chunkfive") format("svg");
+  font-family: pistilli;
+  src: url("../fonts/pistilli.eot");
+  src: url("../fonts/pistilli.eot?#iefix") format("embedded-opentype"), url("../fonts/pistilli.woff") format("woff"), url("../fonts/pistilli.ttf") format("truetype"), url("../fonts/pistilli.svg#pistilli") format("svg");
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -5825,8 +5825,71 @@ button.close {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: chunkfive;
-    src: url("../fonts/chunkfive.svg#chunkfive") format("svg"); } }
+    font-family: pistilli;
+    src: url("../fonts/pistilli.svg#pistilli") format("svg"); } }
+
+@font-face {
+  font-family: Akrobat-Regular;
+  src: url("../fonts/Akrobat-Regular.eot");
+  src: url("../fonts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Akrobat-Regular.woff") format("woff"), url("../fonts/Akrobat-Regular.ttf") format("truetype"), url("../fonts/Akrobat-Regular.svg#Akrobat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: transform; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Akrobat-Regular;
+    src: url("../fonts/Akrobat-Regular.svg#Akrobat-Regular") format("svg"); } }
+
+body {
+  color: white;
+  font-family: Akrobat-Regular;
+  font-size: 20px;
+  padding: 60px 0; }
+
+h1 {
+  font-family: pistilli; }
+
+a {
+  text-decoration: underline;
+  color: #eee;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out; }
+  a:hover {
+    color: white; }
+
+h1 {
+  font-size: 70px;
+  line-height: 110%; }
+
+h2 {
+  font-size: 30px;
+  font-family: pistilli; }
+  h2:first-of-type {
+    margin-top: 0; }
+
+.core, footer, .pitch {
+  border-top: solid 1px white;
+  padding-top: 60px;
+  margin-top: 60px; }
+
+.core {
+  display: table;
+  width: 100%; }
+  .core ul {
+    padding: 20px; }
+  .core > * {
+    display: table-cell;
+    width: 33.33333% !important; }
+    .core > *:not(:last-of-type) {
+      border-right: solid 1px white;
+      padding-right: 30px; }
+    .core > *:not(:first-of-type) {
+      padding-left: 30px; }
 
 body {
   background: #171d25;
@@ -5836,6 +5899,7 @@ body {
 .canvas-wrap {
   position: relative;
   padding: 10%;
+  z-index: -100;
   position: fixed;
   margin: auto;
   top: 0%;
@@ -5853,70 +5917,3 @@ body {
   height: 110%;
   width: 110%;
   border: 1px solid yellow; }
-
-@font-face {
-  font-family: lentil;
-  src: url("../fonts/lentil.eot");
-  src: url("../fonts/lentil.eot?#iefix") format("embedded-opentype"), url("../fonts/lentil.woff") format("woff"), url("../fonts/lentil.ttf") format("truetype"), url("../fonts/lentil.svg#lentil") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  text-transform: transform; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: lentil;
-    src: url("../fonts/lentil.svg#lentil") format("svg"); } }
-
-@font-face {
-  font-family: pistilli;
-  src: url("../fonts/pistilli.eot");
-  src: url("../fonts/pistilli.eot?#iefix") format("embedded-opentype"), url("../fonts/pistilli.woff") format("woff"), url("../fonts/pistilli.ttf") format("truetype"), url("../fonts/pistilli.svg#pistilli") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  text-transform: transform; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: pistilli;
-    src: url("../fonts/pistilli.svg#pistilli") format("svg"); } }
-
-body {
-  background-color: black;
-  color: white;
-  font-family: Georgia, Serif;
-  font-size: 20px; }
-
-h1 {
-  font-family: pistilli; }
-
-h1 {
-  font-size: 70px;
-  line-height: 110%; }
-
-h2 {
-  font-size: 30px;
-  font-family: pistilli; }
-
-.container {
-  width: 700px;
-  padding: 60px 0; }
-
-.core, footer, .pitch {
-  border-top: solid 1px white;
-  padding-top: 40px;
-  margin-top: 40px; }
-
-.core {
-  display: table;
-  width: 100%;
-  font-size: 15px; }
-  .core > * {
-    display: table-cell;
-    width: 33.33333% !important; }
-    .core > *:not(:last-of-type) {
-      border-right: solid 1px white;
-      padding-right: 30px; }
-    .core > *:not(:first-of-type) {
-      padding-left: 30px; }
