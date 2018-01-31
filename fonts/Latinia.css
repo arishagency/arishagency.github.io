@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Latinia-Normal";
+    src: url("Latinia.eot");
+    src: url("Latinia.eot?#iefix") format("embedded-opentype"),
+         url("Latinia.woff2") format("woff2"),
+         url("Latinia.woff") format("woff"),
+         url("Latinia.ttf") format("ttf"),
+         url("Latinia.svg#Latinia-Normal") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

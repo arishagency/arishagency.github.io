@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "LatiniaBlack";
+    src: url("LatiniaBlack.eot");
+    src: url("LatiniaBlack.eot?#iefix") format("embedded-opentype"),
+         url("LatiniaBlack.woff2") format("woff2"),
+         url("LatiniaBlack.woff") format("woff"),
+         url("LatiniaBlack.ttf") format("ttf"),
+         url("LatiniaBlack.svg#LatiniaBlack") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
