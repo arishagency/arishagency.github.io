@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Project Title]]></title><description><![CDATA[Project description here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae!]]></description><link>http://github.com/dylang/node-rss</link><generator>Gulp 3.9.1</generator><lastBuildDate>Wed, 31 Jan 2018 00:45:40 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[What's Next?]]></title><description><![CDATA[<ol>
+<li>Make your project yours at <a href="https://github.com/lazy-8/base/blob/master/docs/configuration.md"><code>docs/configuration.md</code></a></li>
+<li>Learn to manage content at <a href="https://github.com/lazy-8/base/blob/master/docs/editing.md"><code>docs/editing.md</code></a></li>
+<li>Version control at <a href="https://github.com/lazy-8/base/blob/master/docs/version-control.md"><code>docs/version-control.md</code></a></li>
+<li>Fast publishing at <a href="https://github.com/lazy-8/base/blob/master/docs/publishing.md"><code>docs/publishing.md</code></a></li>
+<li>Domains at <a href="https://github.com/lazy-8/base/blob/master/docs/domain.md"><code>docs/domain.md</code></a></li>
+</ol>
+]]></description><link>/next/</link><guid isPermaLink="false">/next/</guid><pubDate>Fri, 21 Jul 2017 04:00:00 GMT</pubDate></item></channel></rss>

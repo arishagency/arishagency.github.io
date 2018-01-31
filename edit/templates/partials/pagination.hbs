@@ -1,8 +1,0 @@
-<nav class="pagination{{#if (or prevUrl nextUrl)}}{{else}} pagination-none{{/if}}">
-  <ul class="pagination">
-    <li class="previous{{#if nextUrl}}{{else}} disabled{{/if}}"><a{{#if nextUrl}} href="{{nextUrl}}" data-total-pages="{{totalPages}}"{{else}} href="#"{{/if}}><i class="fa fa-arrow-circle-left"></i> Older</a></li>
-    <li class="next{{#if prevUrl}}{{else}} disabled{{/if}}"><a{{#if prevUrl}} href="{{prevUrl}}" data-total-pages="{{totalPages}}"{{else}} href="#"{{/if}}>Newer <i class="fa fa-arrow-circle-right"></i></a></li>
-</ul>
-</nav>
-
-
