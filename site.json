@@ -24,5 +24,5 @@
     }
   },
   "imageCompression": true,
-  "ghPagesBranch": "gh-pages"
+  "ghPagesBranch": "master"
 }
