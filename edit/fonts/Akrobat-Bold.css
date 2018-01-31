@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Akrobat-Bold";
+    src: url("Akrobat-Bold.eot");
+    src: url("Akrobat-Bold.eot?#iefix") format("embedded-opentype"),
+         url("Akrobat-Bold.woff2") format("woff2"),
+         url("Akrobat-Bold.woff") format("woff"),
+         url("Akrobat-Bold.ttf") format("ttf"),
+         url("Akrobat-Bold.svg#Akrobat-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}

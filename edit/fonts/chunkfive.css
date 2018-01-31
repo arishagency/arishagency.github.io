@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "ChunkFiveEx";
+    src: url("chunkfive.eot");
+    src: url("chunkfive.eot?#iefix") format("embedded-opentype"),
+         url("chunkfive.woff2") format("woff2"),
+         url("chunkfive.woff") format("woff"),
+         url("chunkfive.ttf") format("ttf"),
+         url("chunkfive.svg#ChunkFiveEx") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}

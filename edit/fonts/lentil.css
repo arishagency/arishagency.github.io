@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Fh_Lentil";
+    src: url("lentil.eot");
+    src: url("lentil.eot?#iefix") format("embedded-opentype"),
+         url("lentil.woff2") format("woff2"),
+         url("lentil.woff") format("woff"),
+         url("lentil.ttf") format("ttf"),
+         url("lentil.svg#Fh_Lentil") format("svg");
+    font-style: normal;
+    font-weight: regular;
+}
