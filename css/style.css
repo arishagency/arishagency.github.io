@@ -5829,44 +5829,56 @@ button.close {
     src: url("../fonts/millerdisplay-light.svg#millerdisplay-light") format("svg"); } }
 
 body {
-  color: white;
+  color: #333;
   font-family: millerdisplay-light;
-  font-size: 20px;
-  padding: 60px 0; }
+  font-size: 16px;
+  padding-top: 48px; }
+
+.container {
+  width: 600px; }
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 100%; } }
 
 h1 {
   font-family: pistilli; }
 
 a {
   text-decoration: underline;
-  color: #eee;
+  color: #333;
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;
   -ms-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   transition: all 300ms ease-out; }
   a:hover {
-    color: white; }
+    color: #333; }
 
 h1 {
   font-size: 70px;
   line-height: 110%; }
 
+footer {
+  background-color: #333;
+  font-size: 15px;
+  color: white;
+  padding: 24px 0;
+  margin-top: 48px; }
+
 h2 {
-  font-size: 30px;
+  font-size: 24px;
   font-family: pistilli; }
   h2:first-of-type {
     margin-top: 0; }
 
-.core, footer, .pitch {
-  border-top: solid 1px white;
-  padding-top: 60px;
-  margin-top: 60px; }
+section {
+  border-top: solid 1px #333;
+  padding-top: 48px;
+  margin-top: 48px; }
 
 body {
-  background: #171d25;
   margin: 0;
-  background: linear-gradient(2deg, #090905 0%, #1f230a 60%, #104242 100%); }
+  background: white; }
 
 .canvas-wrap {
   position: relative;
@@ -5887,20 +5899,4 @@ body {
   top: -5%;
   left: -5%;
   height: 110%;
-  width: 110%;
-  border: 1px solid yellow; }
-
-@media screen and (min-width: 800px) {
-  .core {
-    display: table;
-    width: 100%; }
-    .core ul {
-      padding: 20px; }
-    .core > * {
-      display: table-cell;
-      width: 33.33333% !important; }
-      .core > *:not(:last-of-type) {
-        border-right: solid 1px white;
-        padding-right: 30px; }
-      .core > *:not(:first-of-type) {
-        padding-left: 30px; } }
+  width: 110%; }
