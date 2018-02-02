@@ -5832,7 +5832,19 @@ body {
   color: #333;
   font-family: millerdisplay-light;
   font-size: 16px;
-  padding-top: 48px; }
+  padding-top: 64px; }
+
+.top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  text-align: right; }
+
+.cover h1 {
+  font-size: 70px; }
+
+.cover h2 {
+  font-size: 40px; }
 
 .container {
   width: 600px; }
@@ -5875,6 +5887,11 @@ section {
   border-top: solid 1px #333;
   padding-top: 48px;
   margin-top: 48px; }
+  section h1 {
+    font-size: 15px;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 16px; }
 
 body {
   margin: 0;
