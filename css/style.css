@@ -5815,9 +5815,9 @@ button.close {
     display: none !important; } }
 
 @font-face {
-  font-family: pistilli;
-  src: url("../fonts/pistilli.eot");
-  src: url("../fonts/pistilli.eot?#iefix") format("embedded-opentype"), url("../fonts/pistilli.woff") format("woff"), url("../fonts/pistilli.ttf") format("truetype"), url("../fonts/pistilli.svg#pistilli") format("svg");
+  font-family: millerdisplay-light;
+  src: url("../fonts/millerdisplay-light.eot");
+  src: url("../fonts/millerdisplay-light.eot?#iefix") format("embedded-opentype"), url("../fonts/millerdisplay-light.woff") format("woff"), url("../fonts/millerdisplay-light.ttf") format("truetype"), url("../fonts/millerdisplay-light.svg#millerdisplay-light") format("svg");
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -5825,26 +5825,12 @@ button.close {
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: pistilli;
-    src: url("../fonts/pistilli.svg#pistilli") format("svg"); } }
-
-@font-face {
-  font-family: Akrobat-Regular;
-  src: url("../fonts/Akrobat-Regular.eot");
-  src: url("../fonts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Akrobat-Regular.woff") format("woff"), url("../fonts/Akrobat-Regular.ttf") format("truetype"), url("../fonts/Akrobat-Regular.svg#Akrobat-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  text-transform: transform; }
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: Akrobat-Regular;
-    src: url("../fonts/Akrobat-Regular.svg#Akrobat-Regular") format("svg"); } }
+    font-family: millerdisplay-light;
+    src: url("../fonts/millerdisplay-light.svg#millerdisplay-light") format("svg"); } }
 
 body {
   color: white;
-  font-family: Akrobat-Regular;
+  font-family: millerdisplay-light;
   font-size: 20px;
   padding: 60px 0; }
 
