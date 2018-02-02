@@ -1,8 +1,6 @@
 body {
-     background: #171d25;
      margin: 0;
-    
-    background: linear-gradient(2deg, #090905 0%, #1f230a 60%, #104242 100%);
+    background: $color-bg;
 }
 .canvas-wrap {
 	position:relative;
@@ -25,5 +23,4 @@ body {
     left: -5%;
 	height:110%;
 	width:110%;
-	border:1px solid yellow;
 }

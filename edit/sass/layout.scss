@@ -2,20 +2,30 @@
 @include font-face(millerdisplay-light);
 
 body {
-	color: white;
+	color: $color-fg;
 	font-family: millerdisplay-light;
-	font-size: 20px;
-	padding: 60px 0;
+	font-size: $gap2;
+	padding-top: $gap6;
+	// .container, footer {
+	// 	display: none;
+	// }
+}
+
+.container {
+	width: $bp;
+	@include media($bp, max) {
+		width: 100%;
+	}
 }
 h1 {
 	font-family: pistilli;
 }
 a {
 	text-decoration: underline;
-	color: #eee;
+	color: $color-fg;
 	@include transition;
 	&:hover {
-		color: white;
+		color: $color-fg;
 	}
 }
 
@@ -24,16 +34,24 @@ h1 {
 	line-height: 110%;
 }
 
+footer {
+	background-color: $color-fg;
+	font-size: 15px;
+	color: $color-bg;
+	padding: $gap3 0;
+	margin-top: $gap6;
+}
+
 h2 {
-	font-size: 30px;
+	font-size: $gap3;
 	font-family: pistilli;
 	&:first-of-type {
 		margin-top: 0;
 	}
 }
 
-.core, footer, .pitch {
-	border-top: solid 1px white;
-	padding-top: 60px;
-	margin-top: 60px;
+section {
+	border-top: solid 1px $color-fg;
+	padding-top: $gap6;
+	margin-top: $gap6;
 }

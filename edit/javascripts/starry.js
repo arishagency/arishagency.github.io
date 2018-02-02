@@ -257,7 +257,7 @@ Circle.prototype = {
     },
 		draw:function() {
 
-				ctx.fillStyle = 'rgba(255,255,255,'+ this.dotOpacity +')';
+				ctx.fillStyle = 'rgba(0,0,0,'+ this.dotOpacity +')';
 
 			
 				if(this.traveling && !this.xloop){
@@ -326,4 +326,4 @@ function travel(e) {
 }
 
 document.addEventListener('scroll', onScroll);
-document.addEventListener('click', travel);
+// document.addEventListener('click', travel);

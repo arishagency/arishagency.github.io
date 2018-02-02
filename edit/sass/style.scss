@@ -11,26 +11,3 @@
 
 @import "layout";
 @import "starry";
-
-
-
-	.core {
-		@include media($bp, min) {
-	display: table;
-	width: 100%;
-	ul {
-		padding: 20px;
-	}
-	& > * {
-		display: table-cell;
-		width: (100% / 3) !important;
-		&:not(:last-of-type) {
-			border-right: solid 1px white;
-			padding-right: 30px;
-		}
-		&:not(:first-of-type) {
-			padding-left: 30px;
-		}
-	}
-}
-}

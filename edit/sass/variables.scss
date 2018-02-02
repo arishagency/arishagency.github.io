@@ -2,9 +2,22 @@
 // (`ㅅ`)づ base variables
 // (")(")
 
+$color-bg: white;
+$color-fg: #333;
+
+$bp: 600px;
+
 $prefixes: webkit moz ms o;
 
-$gap: 15px;
-$color-accent: #ccc;
-
-$bp: 800px;
+$gap: 8px;
+$gap2: ($gap * 2);
+$gap3: ($gap * 3);
+$gap4: ($gap * 4);
+$gap5: ($gap * 5);
+$gap6: ($gap * 6);
+$gap7: ($gap * 7);
+$gap8: ($gap * 8);
+$gap9: ($gap * 9);
+$gap10: ($gap * 10);
+$gaphalf: ($gap / 2);
+$gapquarter: ($gap / 4);
