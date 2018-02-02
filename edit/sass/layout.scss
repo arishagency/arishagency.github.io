@@ -1,10 +1,9 @@
 
-@include font-face(pistilli);
-@include font-face(Akrobat-Regular);
+@include font-face(millerdisplay-light);
 
 body {
 	color: white;
-	font-family: Akrobat-Regular;
+	font-family: millerdisplay-light;
 	font-size: 20px;
 	padding: 60px 0;
 }
