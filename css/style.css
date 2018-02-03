@@ -5833,8 +5833,6 @@ body {
   font-family: millerdisplay-light;
   font-size: 16px;
   padding-top: 64px; }
-  body .container, body footer {
-    display: none; }
 
 .top {
   position: -webkit-sticky;
