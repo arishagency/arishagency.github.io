@@ -5874,10 +5874,10 @@ body {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     float: right;
-    margin-right: 24px;
+    margin-right: -48px;
     background-size: 110px 110px;
     background-repeat: no-repeat;
-    background-position: 10px 10px;
+    background-position: 7px 10px;
     background-image: url("../images/logo.svg"); }
 
 .line {
