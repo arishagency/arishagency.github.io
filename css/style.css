@@ -5877,10 +5877,7 @@ body {
     margin-right: 24px; }
 
 .line {
-  margin-top: 120px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: -10px; }
+  margin-top: 120px; }
   .line .container {
     vertical-align: bottom; }
   .line hr {
