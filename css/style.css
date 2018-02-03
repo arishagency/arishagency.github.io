@@ -5852,8 +5852,8 @@ body {
   z-index: 1000;
   position: -webkit-sticky;
   position: sticky;
-  margin-top: 8px;
   top: 104px;
+  margin-top: -10px;
   text-align: right; }
   .logo .thelogo {
     width: 140px;
@@ -5874,10 +5874,14 @@ body {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     float: right;
-    margin-right: 24px; }
+    margin-right: 24px;
+    background-size: 110px 110px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-image: url("../images/logo.svg"); }
 
 .line {
-  margin-top: 120px; }
+  margin-top: 104px; }
   .line .container {
     vertical-align: bottom; }
   .line hr {
