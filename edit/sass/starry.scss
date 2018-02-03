@@ -1,6 +1,7 @@
 body {
      margin: 0;
-    background: $color-bg;
+    // learn rules and options at https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+    @include gradient(0deg,  $color-brand,  white);
 }
 .canvas-wrap {
 	position:relative;
@@ -16,7 +17,8 @@ body {
 }
 
 #canvas {
-	position: fixed;  
+	position: fixed; 
+	@include opacity(80); 
 /* 	position: relative; */
     margin: auto;
     top: -5%;

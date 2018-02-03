@@ -1,14 +1,58 @@
 
-@include font-face(millerdisplay-light);
+@include font-face($font-1);
+@include font-face($font-2);
 
 body {
 	color: $color-fg;
-	font-family: millerdisplay-light;
+	font-family: $font-1;
 	font-size: $gap2;
-	padding-top: $gap6;
-	// .container, footer {
-	// 	display: none;
-	// }
+	padding-top: $gap8;
+}
+
+
+.logo {
+	z-index: 1000;
+	position: -webkit-sticky;
+	position: sticky;
+	margin-top: $gap;
+	top: $gap13;
+	text-align: right;
+	.thelogo {
+		width: 140px;
+		margin-top: ($gap15 * -1);
+		height: 140px;
+		background-color: #fff;
+		@include shadow(normal, 5px 5px 0 rgba(0, 0, 0,0.05));
+		@include radius(normal, 50%);
+		float: right;
+		margin-right: $gap3;
+
+	}
+}
+.line {
+	margin-top: $gap15;
+	// position: -webkit-sticky;
+	// position: sticky;
+	// top: -10px;
+	.container {
+		vertical-align: bottom;
+	}
+	hr {
+		border-top: solid 1px $color-fg;
+
+	} 
+
+}
+
+
+
+.cover {
+	h1 {
+		font-size: 60px;
+	}
+	h2 {
+		font-size: 50px;
+	}
 }
 
 .container {
@@ -18,7 +62,7 @@ body {
 	}
 }
 h1 {
-	font-family: pistilli;
+	font-family: $font-1;
 }
 a {
 	text-decoration: underline;
@@ -29,29 +73,43 @@ a {
 	}
 }
 
-h1 {
-	font-size: 70px;
-	line-height: 110%;
+
+.row:not(:first-of-type) {
+	padding-top: $gap8;
 }
+
 
 footer {
 	background-color: $color-fg;
+
+	font-family: $font-2;
 	font-size: 15px;
 	color: $color-bg;
 	padding: $gap3 0;
-	margin-top: $gap6;
+	margin-top: $gap5;
 }
 
-h2 {
-	font-size: $gap3;
-	font-family: pistilli;
-	&:first-of-type {
+.title {
+	font-size: 40px;
+	h2 {
 		margin-top: 0;
 	}
 }
+.text {
+	font-size: 20px;
+}
 
 section {
-	border-top: solid 1px $color-fg;
-	padding-top: $gap6;
-	margin-top: $gap6;
+	padding-bottom: $gap6;
+	&:not(:last-of-type) {
+		margin-bottom: $gap6;
+		border-bottom: solid 1px $color-fg;
+	}
+	h1 {
+		font-size: 20px;
+		font-family: $font-2;
+		margin-top: 0;
+		text-transform: uppercase;
+		padding-bottom: $gap2;
+	}
 }
