@@ -14,8 +14,8 @@ body {
 	z-index: 1000;
 	position: -webkit-sticky;
 	position: sticky;
-	margin-top: $gap;
 	top: $gap13;
+	margin-top: -10px;
 	text-align: right;
 	.thelogo {
 		width: 140px;
@@ -26,11 +26,15 @@ body {
 		@include radius(normal, 50%);
 		float: right;
 		margin-right: $gap3;
+		background-size: 110px 110px;
+		background-repeat: no-repeat;
+		background-position: 10px 10px;
+		background-image: url('../images/logo.svg');
 
 	}
 }
 .line {
-	margin-top: $gap15;
+	margin-top: $gap13;
 	// position: -webkit-sticky;
 	// position: sticky;
 	// top: -10px;
