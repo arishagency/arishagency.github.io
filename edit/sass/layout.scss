@@ -25,10 +25,10 @@ body {
 		@include shadow(normal, 5px 5px 0 rgba(0, 0, 0,0.05));
 		@include radius(normal, 50%);
 		float: right;
-		margin-right: $gap3;
+		margin-right: ($gap6 * -1);
 		background-size: 110px 110px;
 		background-repeat: no-repeat;
-		background-position: 10px 10px;
+		background-position: 7px 10px;
 		background-image: url('../images/logo.svg');
 
 	}
