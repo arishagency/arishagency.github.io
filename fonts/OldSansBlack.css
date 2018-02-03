@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "OldSansBlack";
+    src: url("OldSansBlack.eot");
+    src: url("OldSansBlack.eot?#iefix") format("embedded-opentype"),
+         url("OldSansBlack.woff2") format("woff2"),
+         url("OldSansBlack.woff") format("woff"),
+         url("OldSansBlack.ttf") format("ttf"),
+         url("OldSansBlack.svg#OldSansBlack") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
