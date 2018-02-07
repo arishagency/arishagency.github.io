@@ -5972,13 +5972,16 @@ footer {
   margin-top: 40px;
   letter-spacing: 5px; }
 
-.title {
-  font-size: 40px; }
-  .title h2 {
-    margin-top: 0; }
+.title h2 {
+  margin-top: 0;
+  font-size: 65px;
+  margin-right: 16px; }
 
 .text {
-  font-size: 20px; }
+  font-size: calc(1.1922503725782414vw + 12.00px);
+  line-height: 1.48em;
+  padding-bottom: 136px;
+  margin-right: 80px; }
 
 section {
   padding-bottom: 48px; }
