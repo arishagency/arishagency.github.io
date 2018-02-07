@@ -1,7 +1,7 @@
 body {
      margin: 0;
     // learn rules and options at https://www.sitepoint.com/building-linear-gradient-mixin-sass/
-    @include gradient(0deg,  $color-brand,  white);
+    @include gradient(0deg,  $color-brand,  #fbf7ed);
 }
 .canvas-wrap {
 	position:relative;

@@ -470,3 +470,17 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
+
+@mixin dot($color: #c9315c, $spacing: $gap2, $size: 11px) {
+ 
+    height: $size;
+    width: $size;
+    margin-right: $spacing;
+    background-color: $color;
+    @include transition;
+    @include opacity(100);
+    &:hover {
+         @include opacity(40);
+
+    }
+}

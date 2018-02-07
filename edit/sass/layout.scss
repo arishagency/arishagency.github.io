@@ -6,7 +6,6 @@ body {
 	color: $color-fg;
 	font-family: $font-1;
 	font-size: $gap2;
-	padding-top: $gap8;
 }
 
 
@@ -14,25 +13,38 @@ body {
 	z-index: 1000;
 	position: -webkit-sticky;
 	position: sticky;
-	top: $gap13;
+	top: $gap17;
 	margin-top: -10px;
+	@include media($bp, max) {
+		top: $gap10;
+	}
 	text-align: right;
 	.thelogo {
 		width: 140px;
-		margin-top: ($gap15 * -1);
+		margin-top: ($gap17 * -1) - 14px;
 		height: 140px;
 		background-color: #fff;
-		@include shadow(normal, 5px 5px 0 rgba(0, 0, 0,0.05));
+		@include shadow(normal, 5px 5px 0 rgba(0, 0, 0,0.15));
 		@include radius(normal, 50%);
 		float: right;
-		margin-right: ($gap6 * -1);
 		background-size: 110px 110px;
 		background-repeat: no-repeat;
 		background-position: 7px 10px;
+		margin-right: ($gap6 * -1);
+		@include media($bp, max) {
+			width: 100px;
+			height: 100px;
+			background-size: 80px 80px;
+			background-position: 7px 10px;
+			margin-right: $gap2;
+			margin-top: ($gap12 * -1) + 3;
+		}
+		
 		background-image: url('../images/logo.svg');
 
 	}
 }
+
 .line {
 	margin-top: $gap10;
 	// position: -webkit-sticky;
@@ -50,13 +62,66 @@ body {
 
 
 
+.divider {
+	margin-bottom: $gap4;
+	text-align: center;
+	li {
+		@include radius(normal, 50%);
+		display: inline-block;
+		&:first-of-type, &:nth-of-type(7) {
+			@include dot(#2abb90);	
+		}
+		&:nth-of-type(2), &:nth-of-type(8) {
+			@include dot(#2a7596);
+		}
+		&:nth-of-type(3), &:nth-of-type(9) {
+			@include dot(#262939);
+		}
+		&:nth-of-type(4), &:nth-of-type(10) {
+			@include dot(#c9315c);
+		}
+		&:nth-of-type(5), &:nth-of-type(11) {
+			@include dot(#d9b551);
+		}
+		&:nth-of-type(6) {
+			font-family: $font-2;
+			padding: 0 $gap2 0 $gaphalf;
+			text-transform: uppercase;
+			font-size: 30px;
+			letter-spacing: 3px;
+		}
+
+	}
+}
+
+.rainbow {
+		background: -moz-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(217,181,81,1)), color-stop(28%, rgba(201,49,92,1)), color-stop(74%, rgba(42,117,150,1)), color-stop(100%, rgba(42,187,144,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ie10+ */
+background: linear-gradient(270deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b551', endColorstr='#2abb90',GradientType=1 ); /* ie6-9 */
+height: 388px;
+width: 100%;
+z-index: -200;
+position: absolute;
+}
+
 .cover {
+	color: white;
+	padding: $gap8 0 $gap12 0;
+	margin-bottom: $gap6;
+
 	h1 {
-		font-size: 60px;
+		font-size: calc(7.153502235469449vw + 1.06px);
+
 	}
 	h2 {
-		font-size: 50px;
+		font-size: 40px;
+		margin-top: $gap3;
 	}
+
 }
 
 .container {
@@ -84,33 +149,54 @@ a {
 
 
 footer {
-	background-color: $color-fg;
+	background-color: #262939;
 
 	font-family: $font-2;
-	font-size: 15px;
+	font-size: 25px;
 	color: $color-bg;
+	text-transform: uppercase;
+
+			letter-spacing: 2px;
 	padding: $gap3 0;
 	margin-top: $gap5;
+	text-align: center;
+	span {
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 13px;
+	}
+	ul {
+		@include reset(list);
+		li {
+			display: inline-block;
+			&:not(:first-of-type):before {
+content: "|";
+padding: 0 $gap;
+			}
+		}
+	}
 }
-
 .title {
-	font-size: 40px;
 	h2 {
 		margin-top: 0;
+		font-size: 65px;
+		margin-right: $gap2;
+		margin-bottom: $gap4;
 	}
 }
 .text {
-	font-size: 20px;
+	font-size: calc(1.1922503725782414vw + 12.00px);
+	line-height: 1.48em;
+	margin-right: $gap10;
 }
 
+section, .section:not(:last-of-type) {
+	padding-bottom: $gap8;
+}
 section {
-	padding-bottom: $gap6;
-	&:not(:last-of-type) {
-		margin-bottom: $gap6;
-		border-bottom: solid 1px $color-fg;
-	}
+	
+
 	h1 {
-		font-size: 20px;
+		font-size: 30px;
 		font-family: $font-2;
 		margin-top: 0;
 		text-transform: uppercase;

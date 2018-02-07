@@ -4,14 +4,14 @@
 
 $color-bg: white;
 $color-fg: #333;
-$color-brand: #b0c2c6;
+$color-brand: #e9e9eb;
 
 $bp: 700px;
 
 $prefixes: webkit moz ms o;
 
 $font-1: millerdisplay-light;
-$font-2: OldSansBlack;
+$font-2: chathura-regular-webfont;
 
 $gap: 8px;
 $gap2: ($gap * 2);
@@ -28,5 +28,7 @@ $gap12: ($gap * 12);
 $gap13: ($gap * 13);
 $gap14: ($gap * 14);
 $gap15: ($gap * 15);
+$gap16: ($gap * 16);
+$gap17: ($gap * 17);
 $gaphalf: ($gap / 2);
 $gapquarter: ($gap / 4);
