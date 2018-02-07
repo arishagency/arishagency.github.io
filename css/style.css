@@ -5856,7 +5856,7 @@ body {
   text-align: right; }
   @media screen and (max-width: 700px) {
     .logo {
-      top: 80px; } }
+      top: 128px; } }
   .logo .thelogo {
     width: 140px;
     margin-top: -150px;
@@ -5886,9 +5886,9 @@ body {
         width: 100px;
         height: 100px;
         background-size: 80px 80px;
-        background-position: 7px 10px;
+        background-position: 7px 4px;
         margin-right: 16px;
-        margin-top: -93px; } }
+        margin-top: -134px; } }
 
 .line {
   margin-top: 80px; }
@@ -5898,8 +5898,9 @@ body {
     border-top: solid 1px #333; }
 
 .divider {
-  margin-bottom: 32px;
-  text-align: center; }
+  text-align: center;
+  padding: 0;
+  margin-bottom: 32px; }
   .divider li {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -5910,6 +5911,11 @@ body {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     display: inline-block; }
+    @media screen and (max-width: 700px) {
+      .divider li {
+        margin-right: 8px !important; }
+        .divider li:first-of-type, .divider li:nth-of-type(7), .divider li:nth-of-type(2), .divider li:nth-of-type(8) {
+          display: none; } }
     .divider li:first-of-type, .divider li:nth-of-type(7) {
       height: 11px;
       width: 11px;
@@ -6011,6 +6017,11 @@ body {
       text-transform: uppercase;
       font-size: 30px;
       letter-spacing: 3px; }
+      @media screen and (max-width: 700px) {
+        .divider li:nth-of-type(6) {
+          padding: 0 8px 0 0;
+          font-size: 25px;
+          letter-spacing: 1px; } }
 
 .rainbow {
   background: -moz-linear-gradient(180deg, #2abb90 0%, #2a7596 26%, #c9315c 72%, #d9b551 100%);
@@ -6031,16 +6042,26 @@ body {
   width: 100%;
   z-index: -200;
   position: absolute; }
+  @media screen and (max-width: 700px) {
+    .rainbow {
+      height: 320px; } }
 
 .cover {
   color: white;
   padding: 64px 0 96px 0;
   margin-bottom: 48px; }
   .cover h1 {
-    font-size: calc(7.153502235469449vw + 1.06px); }
+    font-size: 80px; }
+    @media screen and (max-width: 700px) {
+      .cover h1 {
+        font-size: 60px; } }
   .cover h2 {
     font-size: 40px;
     margin-top: 24px; }
+    @media screen and (max-width: 700px) {
+      .cover h2 {
+        margin-top: 16px;
+        font-size: 30px; } }
 
 .container {
   width: 700px; }
@@ -6071,6 +6092,7 @@ footer {
   font-size: 25px;
   color: white;
   text-transform: uppercase;
+  line-height: 80%;
   letter-spacing: 2px;
   padding: 24px 0;
   margin-top: 40px;
@@ -6091,11 +6113,13 @@ footer {
   font-size: 65px;
   margin-right: 16px;
   margin-bottom: 32px; }
+  @media screen and (max-width: 700px) {
+    .title h2 {
+      font-size: 40px; } }
 
 .text {
   font-size: calc(1.1922503725782414vw + 12.00px);
-  line-height: 1.48em;
-  margin-right: 80px; }
+  line-height: 1.48em; }
 
 section, .section:not(:last-of-type) {
   padding-bottom: 64px; }
