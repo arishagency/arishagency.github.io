@@ -16,7 +16,7 @@ body {
 	top: $gap17;
 	margin-top: -10px;
 	@include media($bp, max) {
-		top: $gap10;
+		top: $gap16;
 	}
 	text-align: right;
 	.thelogo {
@@ -35,9 +35,9 @@ body {
 			width: 100px;
 			height: 100px;
 			background-size: 80px 80px;
-			background-position: 7px 10px;
+			background-position: 7px 4px;
 			margin-right: $gap2;
-			margin-top: ($gap12 * -1) + 3;
+			margin-top: ($gap16 * -1)- 6;
 		}
 		
 		background-image: url('../images/logo.svg');
@@ -63,11 +63,18 @@ body {
 
 
 .divider {
-	margin-bottom: $gap4;
 	text-align: center;
+	padding: 0;
+	margin-bottom: $gap4;
 	li {
 		@include radius(normal, 50%);
 		display: inline-block;
+		@include media($bp, max) {
+			margin-right: $gap !important;
+			&:first-of-type, &:nth-of-type(7), &:nth-of-type(2), &:nth-of-type(8) {
+				display: none;
+			}
+		}
 		&:first-of-type, &:nth-of-type(7) {
 			@include dot(#2abb90);	
 		}
@@ -89,6 +96,12 @@ body {
 			text-transform: uppercase;
 			font-size: 30px;
 			letter-spacing: 3px;
+			@include media($bp, max) {
+				padding: 0 $gap 0 0;
+				font-size: 25px;
+
+			letter-spacing: 1px;
+			}
 		}
 
 	}
@@ -103,6 +116,9 @@ background: -ms-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1
 background: linear-gradient(270deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* w3c */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b551', endColorstr='#2abb90',GradientType=1 ); /* ie6-9 */
 height: 388px;
+@include media($bp, max) {
+	height: 320px;
+}
 width: 100%;
 z-index: -200;
 position: absolute;
@@ -114,12 +130,19 @@ position: absolute;
 	margin-bottom: $gap6;
 
 	h1 {
-		font-size: calc(7.153502235469449vw + 1.06px);
+		font-size: 80px;
+		@include media($bp, max) {
+			font-size: 60px;
+		}
 
 	}
 	h2 {
 		font-size: 40px;
 		margin-top: $gap3;
+			@include media($bp, max) {
+				margin-top: $gap2;
+			font-size: 30px;
+		}
 	}
 
 }
@@ -155,7 +178,7 @@ footer {
 	font-size: 25px;
 	color: $color-bg;
 	text-transform: uppercase;
-
+line-height: 80%;
 			letter-spacing: 2px;
 	padding: $gap3 0;
 	margin-top: $gap5;
@@ -179,6 +202,9 @@ padding: 0 $gap;
 	h2 {
 		margin-top: 0;
 		font-size: 65px;
+		@include media($bp, max) {
+			font-size: 40px;
+		}
 		margin-right: $gap2;
 		margin-bottom: $gap4;
 	}
@@ -186,7 +212,6 @@ padding: 0 $gap;
 .text {
 	font-size: calc(1.1922503725782414vw + 12.00px);
 	line-height: 1.48em;
-	margin-right: $gap10;
 }
 
 section, .section:not(:last-of-type) {
