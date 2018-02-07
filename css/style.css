@@ -5887,11 +5887,58 @@ body {
   .line hr {
     border-top: solid 1px #333; }
 
+.divider {
+  margin-bottom: 32px;
+  text-align: center; }
+  .divider .dot-blue {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #2a7596; }
+  .divider .dot-red {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #c9315c; }
+  .divider .dot-green {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #2abb90; }
+  .divider .dot-yellow {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #d9b551; }
+  .divider .dot-darkblue {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #262939; }
+
 .cover h1 {
-  font-size: 60px; }
+  font-size: calc(7.153502235469449vw + 1.06px); }
 
 .cover h2 {
-  font-size: 50px; }
+  line-height: 1.6;
+  padding-left: 50px;
+  margin-top: 0;
+  padding-top: 0; }
 
 .container {
   width: 700px; }
@@ -5917,12 +5964,13 @@ a {
   padding-top: 64px; }
 
 footer {
-  background-color: #333;
+  background-color: #262939;
   font-family: OldSansBlack;
   font-size: 15px;
   color: white;
   padding: 24px 0;
-  margin-top: 40px; }
+  margin-top: 40px;
+  letter-spacing: 5px; }
 
 .title {
   font-size: 40px; }
@@ -5935,20 +5983,21 @@ footer {
 section {
   padding-bottom: 48px; }
   section:not(:last-of-type) {
-    margin-bottom: 48px;
-    border-bottom: solid 1px #333; }
+    margin-bottom: 48px; }
   section h1 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: OldSansBlack;
+    font-style: italic;
+    letter-spacing: 2px;
     margin-top: 0;
     text-transform: uppercase;
     padding-bottom: 16px; }
 
 body {
   margin: 0;
-  background: #b0c2c6;
-  background: -webkit-linear-gradient(90deg, #b0c2c6, white);
-  background: linear-gradient(0deg, #b0c2c6, white); }
+  background: #e9e9eb;
+  background: -webkit-linear-gradient(90deg, #e9e9eb, #fbf7ed);
+  background: linear-gradient(0deg, #e9e9eb, #fbf7ed); }
 
 .canvas-wrap {
   position: relative;
