@@ -21,7 +21,7 @@ body {
 	text-align: right;
 	.thelogo {
 		width: 140px;
-		margin-top: ($gap17 * -1) - 14px;
+		margin-top: ($gap17 * -1) - 45px;
 		height: 140px;
 		background-color: #fff;
 		@include shadow(normal, 5px 5px 0 rgba(0, 0, 0,0.15));
@@ -30,14 +30,15 @@ body {
 		background-size: 110px 110px;
 		background-repeat: no-repeat;
 		background-position: 7px 10px;
-		margin-right: ($gap6 * -1);
+		margin-right: ($gap9 * -1);
+		@include subtleFade($duration: $dr, $delay: ($dl * 3));
 		@include media($bp, max) {
 			width: 100px;
 			height: 100px;
 			background-size: 80px 80px;
 			background-position: 7px 4px;
-			margin-right: 0;
-			margin-top: ($gap14 * -1) - 6;
+			margin-right: -$gap2;
+			margin-top: ($gap14 * -1) - 35;
 		}
 		
 		background-image: url('../images/logo.svg');
@@ -108,6 +109,7 @@ body {
 }
 
 .rainbow {
+		@include fadeIn($duration: ($dr * 10));
 	background: -moz-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ff3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(217,181,81,1)), color-stop(28%, rgba(201,49,92,1)), color-stop(74%, rgba(42,117,150,1)), color-stop(100%, rgba(42,187,144,1))); /* safari4+,chrome */
 	background: -webkit-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* safari5.1+,chrome10+ */
@@ -127,6 +129,7 @@ body {
 	height: 90vh;
 	h1 {
 		font-size: 90px;
+		@include subtleFade($duration: $dr, $delay: $dl);
 		@include media($bp, max) {
 			font-size: 70px;
 		}
@@ -136,6 +139,7 @@ body {
 		font-size: 40px;
 		line-height: 130%;
 		margin-top: $gap4;
+		@include subtleFade($duration: $dr, $delay: ($dl * 2));
 		@include media($bp, max) {
 			margin-top: $gap3;
 			font-size: 30px;
@@ -144,11 +148,14 @@ body {
 	.container {
 		
 		height: 90vh;
-
+.center {
+	padding-bottom: $gap10;
+}
 		.border {
 			padding: $gap4;
 			border: solid 2px white;
 			display: flex;
+			@include fadeIn;
 height: 100%;
 align-items: center;
 

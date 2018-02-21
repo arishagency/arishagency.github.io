@@ -7,6 +7,8 @@ $color-fg: #333;
 $color-brand: #e9e9eb;
 
 $bp: 700px;
+$dl: 1000ms;
+$dr: 1000ms;
 
 $prefixes: webkit moz ms o;
 
@@ -32,3 +34,24 @@ $gap16: ($gap * 16);
 $gap17: ($gap * 17);
 $gaphalf: ($gap / 2);
 $gapquarter: ($gap / 4);
+
+@include keyframes(subtleFade) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-$gap));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@mixin subtleFade($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(subtleFade);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

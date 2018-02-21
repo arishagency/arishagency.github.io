@@ -14,6 +14,7 @@ body {
 	height:100%;
 	width:100%;
 	box-sizing:border-box;
+	@include fadeIn($duration: ($dr * 30), $delay: ($dl * 4));
 }
 
 #canvas {
