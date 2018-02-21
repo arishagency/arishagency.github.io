@@ -16,7 +16,7 @@ body {
 	top: $gap17;
 	margin-top: -10px;
 	@include media($bp, max) {
-		top: $gap16;
+		top: $gap13;
 	}
 	text-align: right;
 	.thelogo {
@@ -36,8 +36,8 @@ body {
 			height: 100px;
 			background-size: 80px 80px;
 			background-position: 7px 4px;
-			margin-right: $gap2;
-			margin-top: ($gap16 * -1)- 6;
+			margin-right: 0;
+			margin-top: ($gap14 * -1) - 6;
 		}
 		
 		background-image: url('../images/logo.svg');
@@ -100,7 +100,7 @@ body {
 				padding: 0 $gap 0 0;
 				font-size: 25px;
 
-			letter-spacing: 1px;
+				letter-spacing: 1px;
 			}
 		}
 
@@ -108,43 +108,57 @@ body {
 }
 
 .rainbow {
-		background: -moz-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ff3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(217,181,81,1)), color-stop(28%, rgba(201,49,92,1)), color-stop(74%, rgba(42,117,150,1)), color-stop(100%, rgba(42,187,144,1))); /* safari4+,chrome */
-background: -webkit-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ie10+ */
-background: linear-gradient(270deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b551', endColorstr='#2abb90',GradientType=1 ); /* ie6-9 */
-height: 90vh;
-width: 100%;
-z-index: -200;
-position: absolute;
+	background: -moz-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(217,181,81,1)), color-stop(28%, rgba(201,49,92,1)), color-stop(74%, rgba(42,117,150,1)), color-stop(100%, rgba(42,187,144,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(180deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* ie10+ */
+	background: linear-gradient(270deg, rgba(42,187,144,1) 0%, rgba(42,117,150,1) 26%, rgba(201,49,92,1) 72%, rgba(217,181,81,1) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b551', endColorstr='#2abb90',GradientType=1 ); /* ie6-9 */
+	height: 90vh;
+	width: 100%;
+	z-index: -200;
+	position: absolute;
 }
 
 .cover {
 	color: white;
-	padding: $gap8 0 $gap12 0;
 	margin-bottom: $gap6;
-			height: 90vh;
+	height: 90vh;
 	h1 {
-		font-size: 80px;
+		font-size: 90px;
 		@include media($bp, max) {
-			font-size: 60px;
+			font-size: 70px;
 		}
 
 	}
 	h2 {
 		font-size: 40px;
-		margin-top: $gap3;
-			@include media($bp, max) {
-				margin-top: $gap2;
+		line-height: 130%;
+		margin-top: $gap4;
+		@include media($bp, max) {
+			margin-top: $gap3;
 			font-size: 30px;
+		}
+	}
+	.container {
+		
+		height: 90vh;
+
+		.border {
+			padding: $gap4;
+			border: solid 2px white;
+			display: flex;
+height: 100%;
+align-items: center;
+
 		}
 	}
 
 }
 
 .container {
+	padding: $gap4;
 	width: $bp;
 	@include media($bp, max) {
 		width: 100%;
@@ -175,8 +189,8 @@ footer {
 	font-size: 25px;
 	color: $color-bg;
 	text-transform: uppercase;
-line-height: 80%;
-			letter-spacing: 2px;
+	line-height: 80%;
+	letter-spacing: 2px;
 	padding: $gap3 0;
 	margin-top: $gap5;
 	text-align: center;
@@ -189,8 +203,8 @@ line-height: 80%;
 		li {
 			display: inline-block;
 			&:not(:first-of-type):before {
-content: "|";
-padding: 0 $gap;
+				content: "|";
+				padding: 0 $gap;
 			}
 		}
 	}
