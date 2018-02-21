@@ -5856,7 +5856,7 @@ body {
   text-align: right; }
   @media screen and (max-width: 700px) {
     .logo {
-      top: 128px; } }
+      top: 104px; } }
   .logo .thelogo {
     width: 140px;
     margin-top: -150px;
@@ -5887,8 +5887,8 @@ body {
         height: 100px;
         background-size: 80px 80px;
         background-position: 7px 4px;
-        margin-right: 16px;
-        margin-top: -134px; } }
+        margin-right: 0;
+        margin-top: -118px; } }
 
 .line {
   margin-top: 80px; }
@@ -6038,32 +6038,39 @@ body {
   /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b551', endColorstr='#2abb90',GradientType=1 );
   /* ie6-9 */
-  height: 388px;
+  height: 90vh;
   width: 100%;
   z-index: -200;
   position: absolute; }
-  @media screen and (max-width: 700px) {
-    .rainbow {
-      height: 340px; } }
 
 .cover {
-  color: #fbf7f2;
-  padding: 64px 0 96px 0;
-  margin-bottom: 48px; }
+  color: white;
+  margin-bottom: 48px;
+  height: 90vh; }
   .cover h1 {
-    font-size: 80px; }
+    font-size: 90px; }
     @media screen and (max-width: 700px) {
       .cover h1 {
-        font-size: 60px; } }
+        font-size: 70px; } }
   .cover h2 {
     font-size: 40px;
-    margin-top: 24px; }
+    line-height: 130%;
+    margin-top: 32px; }
     @media screen and (max-width: 700px) {
       .cover h2 {
-        margin-top: 16px;
+        margin-top: 24px;
         font-size: 30px; } }
+  .cover .container {
+    height: 90vh; }
+    .cover .container .border {
+      padding: 32px;
+      border: solid 2px white;
+      display: flex;
+      height: 100%;
+      align-items: center; }
 
 .container {
+  padding: 32px;
   width: 700px; }
   @media screen and (max-width: 700px) {
     .container {
