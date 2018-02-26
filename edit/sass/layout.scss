@@ -132,6 +132,7 @@ body {
 		@include subtleFade($duration: $dr, $delay: $dl);
 		@include media($bp, max) {
 			font-size: 60px;
+			margin-top: $gap7;
 		}
 
 	}
@@ -210,7 +211,7 @@ footer {
 		li {
 			display: inline-block;
 			&:not(:first-of-type):before {
-				content: "|";
+				content: "||";
 				padding: 0 $gap;
 			}
 		}
