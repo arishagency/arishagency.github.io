@@ -14401,7 +14401,7 @@ body {
     backface-visibility: hidden; }
     @media screen and (max-width: 700px) {
       .cover h1 {
-        font-size: 70px; } }
+        font-size: 60px; } }
   .cover h2 {
     font-size: 40px;
     line-height: 130%;
