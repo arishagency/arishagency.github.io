@@ -5,6 +5,6 @@ var gulp = require("gulp"),
     globalVar = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
 gulp.task("copy-assets", ["copy-fonts"], function () {
-    return gulp.src([globalVar.editFolder + "/favicon.ico", globalVar.editFolder + "/*.png"])
+    return gulp.src([globalVar.editFolder + "/favicon/*"])
         .pipe(gulp.dest(globalVar.distFolder));
 });
