@@ -14401,7 +14401,8 @@ body {
     backface-visibility: hidden; }
     @media screen and (max-width: 700px) {
       .cover h1 {
-        font-size: 60px; } }
+        font-size: 60px;
+        margin-top: 56px; } }
   .cover h2 {
     font-size: 40px;
     line-height: 130%;
@@ -14534,7 +14535,7 @@ footer {
     footer ul li {
       display: inline-block; }
       footer ul li:not(:first-of-type):before {
-        content: "|";
+        content: "||";
         padding: 0 8px; }
 
 .title h2 {
