@@ -77,19 +77,19 @@ body {
 			}
 		}
 		&:first-of-type, &:nth-of-type(7) {
-			@include dot(#2abb90);	
+			@include dot(#d9b551);	
 		}
 		&:nth-of-type(2), &:nth-of-type(8) {
-			@include dot(#2a7596);
-		}
-		&:nth-of-type(3), &:nth-of-type(9) {
-			@include dot(#262939);
-		}
-		&:nth-of-type(4), &:nth-of-type(10) {
 			@include dot(#c9315c);
 		}
+		&:nth-of-type(3), &:nth-of-type(9) {
+			@include dot(#60375F);
+		}
+		&:nth-of-type(4), &:nth-of-type(10) {
+			@include dot(#2a7596);
+		}
 		&:nth-of-type(5), &:nth-of-type(11) {
-			@include dot(#d9b551);
+			@include dot(#2abb90);
 		}
 		&:nth-of-type(6) {
 			font-family: $font-2;
@@ -185,9 +185,23 @@ a {
 }
 
 
+.arrow 
+ul {
+    list-style: none;
+
+li:before {
+    content: "⇾";
+    float: left;
+    width: 1.2em;
+}
+};
+
+
 .row:not(:first-of-type) {
 	padding-top: $gap8;
 }
+
+
 
 
 footer {
