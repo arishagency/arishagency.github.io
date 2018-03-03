@@ -14200,7 +14200,7 @@ body {
       height: 11px;
       width: 11px;
       margin-right: 16px;
-      background-color: #2abb90;
+      background-color: #d9b551;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       -ms-transition: all 300ms ease-out;
@@ -14219,7 +14219,7 @@ body {
       height: 11px;
       width: 11px;
       margin-right: 16px;
-      background-color: #2a7596;
+      background-color: #c9315c;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       -ms-transition: all 300ms ease-out;
@@ -14238,7 +14238,7 @@ body {
       height: 11px;
       width: 11px;
       margin-right: 16px;
-      background-color: #262939;
+      background-color: #60375F;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       -ms-transition: all 300ms ease-out;
@@ -14257,7 +14257,7 @@ body {
       height: 11px;
       width: 11px;
       margin-right: 16px;
-      background-color: #c9315c;
+      background-color: #2a7596;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       -ms-transition: all 300ms ease-out;
@@ -14276,7 +14276,7 @@ body {
       height: 11px;
       width: 11px;
       margin-right: 16px;
-      background-color: #d9b551;
+      background-color: #2abb90;
       -webkit-transition: all 300ms ease-out;
       -moz-transition: all 300ms ease-out;
       -ms-transition: all 300ms ease-out;
@@ -14513,6 +14513,13 @@ a {
   a:hover {
     color: #333; }
 
+.arrow ul {
+  list-style: none; }
+  .arrow ul li:before {
+    content: "⇾";
+    float: left;
+    width: 1.2em; }
+
 .row:not(:first-of-type) {
   padding-top: 64px; }
 
@@ -14564,8 +14571,8 @@ section h1 {
 body {
   margin: 0;
   background: #e9e9eb;
-  background: -webkit-linear-gradient(90deg, #e9e9eb, #fbf7ed);
-  background: linear-gradient(0deg, #e9e9eb, #fbf7ed); }
+  background: -webkit-linear-gradient(90deg, #e9e9eb, #F7F8F9);
+  background: linear-gradient(0deg, #e9e9eb, #F7F8F9); }
 
 .canvas-wrap {
   position: relative;
