@@ -7,7 +7,7 @@ var canvas = document.getElementById('canvas'),
 
 var circles = [];
 var circleSize = 120; // the space between dots, roughly, in pixels
-var dotOpacity = 0.5;
+var dotOpacity = 100;
 
 // speed of orbit, if dotSpeedX = dotSpeedY you get a perfect circle
 //   larger number = slower orbit
