@@ -12,5 +12,4 @@ gulp.task("sass", function () {
 .pipe(customPlumber('SCSS Error'))
         .pipe(sass())
         .pipe(gulp.dest(globalVar.distFolder + "/css"));
-
 });

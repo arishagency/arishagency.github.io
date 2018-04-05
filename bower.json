@@ -4,7 +4,6 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "font-awesome": "~4.2.0",
-    "bootstrap-sass": "^3.3.7",
-    "animatewithsass": "^3.2.2"
+    "bootstrap-sass": "^3.3.7"
   }
 }
