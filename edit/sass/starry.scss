@@ -6,8 +6,8 @@ body {
 .canvas-wrap {
 	position:relative;
 	padding:10%;
-	z-index: -100;
 	position: fixed;
+	z-index: -100;
     margin: auto;
     top: 0%;
     left: 0%;
@@ -15,6 +15,7 @@ body {
 	width:100%;
 	box-sizing:border-box;
 	@include fadeIn($duration: ($dr * 30), $delay: ($dl * 4));
+
 }
 
 #canvas {
@@ -26,4 +27,5 @@ body {
     left: -5%;
 	height:110%;
 	width:110%;
+	color: red;
 }

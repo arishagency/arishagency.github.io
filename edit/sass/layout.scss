@@ -261,3 +261,107 @@ section {
 		padding-bottom: $gap2;
 	}
 }
+
+.alex-team-memb-pic {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin: 0 auto 20px auto;
+  background: url("https://stockx.imgix.net/products/streetwear/Supreme-Chopsticks-Red.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Three columns side by side */
+.about-column-alex {
+   display: block;
+    width: 45%;
+    margin: auto;
+    padding: 0 0px;
+    text-align: center;
+    float: left;
+    position:relative;
+    z-index:900;
+    background-color: #e9e9eb;
+
+   
+}
+
+.about-column-cosmo {
+   display: block;
+    width: 45%;
+    margin: auto;
+    padding: 0 0px;
+    text-align: center;
+    float: right;
+    position:relative;
+    z-index:900;
+    background-color: #e9e9eb;
+   
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    .about-column-alex {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-column-cosmo {
+        width: 100%;
+        margin: auto; 
+
+
+    }
+}
+
+/* Add some shadows to create a card effect */
+.about-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.about-container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.about-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.about-title {
+   color: black;
+    text-align: center;
+}
+
+.about-text {
+	color: black;
+	text-align: justify;
+}
+
+.about-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #2a7596;
+    text-align: center;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    width: 100%;
+
+}
+a { color: white; }
+
+.about-button:hover {
+    background-color: #2abb90;
+}
